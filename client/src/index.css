@@ -64,7 +64,7 @@ html {
 .nav__logo,
 .nav__burger,
 .nav__close {
-  color: #373f52;
+  color: #003a70;
 }
 
 .nav__logo h1 {
@@ -72,7 +72,7 @@ html {
 }
 
 .nav__logo img {
-  width: 95px;
+  width: 100px;
   height: auto;
 }
 
@@ -96,7 +96,7 @@ html {
 
 @media (max-width: 480px) {
   .nav__logo img {
-    width: 85px;
+    width: 95px;
   }
 }
 
@@ -123,7 +123,7 @@ html {
   position: relative;
   font-size: 1.25rem;
   font-weight: initial;
-  color: #07364e;
+  color: #003a70;
 }
 
 .nav__burger,
@@ -147,7 +147,7 @@ html {
 }
 
 .contact-btn {
-  background-color: #f1383b;
+  background-color: #01284e;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
@@ -210,7 +210,7 @@ html {
 }
 
 .nav__link {
-  color: #373f52;
+  color: #003a70;
   font-weight: 600;
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -363,4 +363,76 @@ html {
     pointer-events: initial;
     transition: top 0.3s;
   }
+}
+
+/* Header Top Styles */
+.header-top {
+  background-color: #f8f9fa;
+  padding: 8px 0;
+  display: flex;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 12px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.certifications {
+  text-align: center;
+  padding: 5px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.header-top-countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.header-top-countries img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease;
+}
+
+.header-top-countries img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header-top {
+    display: none;
+  }
+
+  /* Alternative mobile-friendly solution if needed */
+  /*
+  .header-top {
+    padding: 5px 0;
+  }
+  
+  .certifications p {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+  }
+  
+  .header-top-countries {
+    overflow-x: auto;
+    padding: 8px 10px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .header-top-countries::-webkit-scrollbar {
+    display: none;
+  }
+  */
 }
