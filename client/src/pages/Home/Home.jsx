@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUserTie, FaCertificate, FaGlobeAmericas } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
+import { Md3P, MdArrowOutward } from "react-icons/md";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import herobg from "../../assets/homehero.png";
 import "./style.css";
@@ -10,7 +11,19 @@ import p2 from "../../assets/6 ft Offshore Mini Shelved Container - 01.png";
 import p3 from "../../assets/10 ft DNV CSC Offshore Container - 01.png";
 import p4 from "../../assets/20 ft DNV CSC Offshore Container - 01.png";
 
+import i1 from "../../assets/oil&gas.png";
+import i2 from "../../assets/shipping.png";
+import i3 from "../../assets/renewable.png";
+import i4 from "../../assets/naval.png";
+
+import earth from "../../assets/earthbg.png";
 const Home = () => {
+  const industries = [
+    { image: i1, label: "Oil & Gas Offshore" },
+    { image: i2, label: "Shipping Containers" },
+    { image: i3, label: "Renewable Energy" },
+    { image: i4, label: "Naval & Defense Sectors" },
+  ];
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -150,6 +163,50 @@ const Home = () => {
             </p>
             <button className="hero-button">More About Quickfit</button>
           </div>
+        </div>
+      </section>
+      <section className="global-reach">
+        <div className="overlay">
+          <h2 className="subtitle">
+            <span className="orange">#</span>OUR GLOBAL REACH
+          </h2>
+          <h1 className="title">Worldwide Manufacturing, Delivery & Support</h1>
+
+          <div className="stats">
+            <div className="stat-box">
+              <h3 className="stat-number">10K+</h3>
+              <p className="stat-label">Units</p>
+            </div>
+            <div className="stat-box">
+              <h3 className="stat-number">70+</h3>
+              <p className="stat-label">Countries</p>
+            </div>
+            <div className="stat-box">
+              <h3 className="stat-number">300+</h3>
+              <p className="stat-label">Clients</p>
+            </div>
+          </div>
+        </div>
+        <img className="background-map" src={earth} alt="Global Map" />
+      </section>
+
+      <section className="industries">
+        <h4 className="subtitle">#INDUSTRIES WE SERVE</h4>
+        <h2 className="title">Engineered Solutions for Every Sector</h2>
+
+        <div className="industry-grid">
+          {industries.map((industry, index) => (
+            <div className="industry-card" key={index}>
+              <div className="image-container">
+                <img src={industry.image} alt={industry.label} />
+                <div className="icon-overlay">
+                  <FaArrowRightLong className="icon" />
+                </div>
+              </div>
+              <h3 className="label">{industry.label}</h3>
+              <div className="underline"></div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
