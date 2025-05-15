@@ -16,6 +16,11 @@ import i2 from "../../assets/shipping.png";
 import i3 from "../../assets/renewable.png";
 import i4 from "../../assets/naval.png";
 
+import c1 from "../../assets/cert1.png";
+import c2 from "../../assets/cert2.png";
+import c3 from "../../assets/cert3.png";
+import c4 from "../../assets/cert4.png";
+
 import earth from "../../assets/earthbg.png";
 const Home = () => {
   const industries = [
@@ -191,8 +196,12 @@ const Home = () => {
       </section>
 
       <section className="industries">
-        <h4 className="subtitle">#INDUSTRIES WE SERVE</h4>
-        <h2 className="title">Engineered Solutions for Every Sector</h2>
+        <h4 className="industries-subtitle">
+          <span className="orange">#</span>INDUSTRIES WE SERVE
+        </h4>
+        <h2 className="industries-title">
+          Engineered Solutions for Every Sector
+        </h2>
 
         <div className="industry-grid">
           {industries.map((industry, index) => (
@@ -207,6 +216,31 @@ const Home = () => {
               <div className="underline"></div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="certifications-section">
+        <div className="certifications-container">
+          <div className="cert-logos">
+            <img src={c1} alt="Certification 1" />
+            <img src={c2} alt="Certification 2" />
+            <img src={c3} alt="Certification 3" />
+            <img src={c4} alt="Certification 4" />
+          </div>
+
+          <div className="cert-content">
+            <h4 className="cert-subtitle"><span className="orange">#</span>OUR CERTIFICATIONS</h4>
+            <h2 className="cert-title">
+              Globally Recognized.
+              <br />
+              Industry Certified
+            </h2>
+            <p className="cert-description">
+              We adhere to globally recognized certification frameworks to
+              guarantee that every unit delivered is engineered with precision,
+              tested for excellence, and approved for safety compliance.
+            </p>
+          </div>
         </div>
       </section>
     </div>
