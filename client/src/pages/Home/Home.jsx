@@ -1,7 +1,14 @@
 import React from "react";
 import { FaUserTie, FaCertificate, FaGlobeAmericas } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
+
 import herobg from "../../assets/homehero.png";
 import "./style.css";
+
+import p1 from "../../assets/6 ft Offshore Mini Container - 01.png";
+import p2 from "../../assets/6 ft Offshore Mini Shelved Container - 01.png";
+import p3 from "../../assets/10 ft DNV CSC Offshore Container - 01.png";
+import p4 from "../../assets/20 ft DNV CSC Offshore Container - 01.png";
 
 const Home = () => {
   return (
@@ -51,7 +58,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Section */}
       <section className="why-choose-section">
         <div className="why-left">
@@ -70,6 +76,80 @@ const Home = () => {
             efficiency, and innovation in offshore container and machinery
             applications. From design to delivery, we've got you covered.
           </p>
+        </div>
+      </section>
+      <section className="popular-section">
+        <div className="section-heading">
+          <h4>
+            <span className="orange">#</span>OUR MOST POPULAR SOLUTIONS
+          </h4>
+        </div>
+
+        <div className="product-cards">
+          <div className="product-card">
+            <div className="card-image-wrapper">
+              <h1 className="card-number">01</h1>
+              <img
+                src={p1}
+                alt="Offshore Container"
+                className="product-image"
+              />
+              <div className="card-caption">MINI OFFSHORE CONTAINER</div>
+            </div>
+          </div>
+
+          <div className="product-card">
+            <div className="card-image-wrapper">
+              <h1 className="card-number">02</h1>
+              <img
+                src={p2}
+                alt="Offshore Waste Skip"
+                className="product-image"
+              />
+              <div className="card-caption">
+                MINI SHELVED OFFSHORE CONTAINER
+              </div>
+            </div>
+          </div>
+
+          <div className="product-card">
+            <div className="card-image-wrapper">
+              <h1 className="card-number">03</h1>
+              <img
+                src={p3}
+                alt="Offshore Half Height Basket"
+                className="product-image"
+              />
+              <div className="card-caption">DNV CSC OFFSHORE CONTAINER</div>
+            </div>
+          </div>
+        </div>
+
+        <button className="hero-button">Explore All Products</button>
+      </section>
+
+      <section className="since-section">
+        <div className="since-heading">since 1962</div>
+
+        <div className="since-content">
+          <div className="arrow-icon">
+            <MdArrowOutward />
+          </div>
+
+          <div className="since-text">
+            <h5 className="tag">
+              <span className="orange">#</span>ABOUT QUICKFIT
+            </h5>
+            <h2 className="headline">We work for you since 1962</h2>
+            <p className="description">
+              Quickfit is a global manufacturer specializing in offshore
+              containers, skid-mounted modules, and engineered equipment
+              designed for the world’s toughest environments. Since 1962, we’ve
+              delivered high-performance solutions for energy, marine, and
+              industrial sectors.
+            </p>
+            <button className="hero-button">More About Quickfit</button>
+          </div>
         </div>
       </section>
     </div>
