@@ -858,21 +858,6 @@
   margin-top: 30px;
 }
 
-.hero-button {
-  background-color: #f15a24;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #d94e1e;
-}
-
 /* Responsive Styles */
 @media (max-width: 992px) {
   .blogs-grid {
@@ -893,5 +878,75 @@
 
   .featured {
     grid-column: span 1;
+  }
+}
+.trusted-clients {
+  padding: 1rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.clients-title {
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Main animation */
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 25s linear infinite;
+}
+
+/* Pause the animation if any child is hovered */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  padding: 0 30px;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.carousel-item img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+/* Remove grayscale on hover */
+.carousel-item:hover {
+  filter: grayscale(0);
+}
+
+/* Keyframe animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-item {
+    padding: 0 15px;
+  }
+
+  .carousel-item img {
+    height: 90px;
   }
 }

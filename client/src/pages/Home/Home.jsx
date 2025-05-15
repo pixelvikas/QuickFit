@@ -43,6 +43,22 @@ const Home = () => {
     { image: i3, label: "Renewable Energy" },
     { image: i4, label: "Naval & Defense Sectors" },
   ];
+
+  const clients = [
+    client1,
+    client2,
+    client3,
+    client4,
+    client5,
+    client6,
+    client7,
+    client8,
+    client9,
+  ];
+
+  // Duplicate the list for seamless infinite loop
+  const allClients = [...clients, ...clients];
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -305,6 +321,21 @@ const Home = () => {
 
         <div className="blog-button">
           <button className="hero-button">Explore All Blogs</button>
+        </div>
+      </section>
+
+      <section className="trusted-clients">
+        <h2 className="clients-title">
+          <span className="orange">#</span>OUR TRUSTED CLIENTS
+        </h2>
+        <div className="carousel-wrapper">
+          <div className="carousel-track">
+            {allClients.map((logo, index) => (
+              <div className="carousel-item" key={index}>
+                <img src={logo} alt={`client-logo-${index}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
