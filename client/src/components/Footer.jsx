@@ -23,7 +23,7 @@ const Footer = () => {
           </h2>
           <p className="footer-description">
             Quickfit is a globally recognized manufacturer of offshore
-            containers and specialized machinery.
+            containers and specialized machinery.      
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+        {/*  dc dc dc  ad snmdasd    asdna smdd a>?oasab asdjjasdd na snas nd, a,sdas,m asamdd ammmddkmk nas  n s d,asdd    m fasmda, */}
         <div className="footer-right">
           <div className="footer-links">
             <h4>Quick Links</h4>

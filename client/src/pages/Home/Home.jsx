@@ -21,6 +21,20 @@ import c2 from "../../assets/cert2.png";
 import c3 from "../../assets/cert3.png";
 import c4 from "../../assets/cert4.png";
 
+import blog1 from "../../assets/blog1.png";
+import blog2 from "../../assets/blog2.png";
+import blog3 from "../../assets/blog3.png";
+
+import client1 from "../../assets/client1.png";
+import client2 from "../../assets/client2.png";
+import client3 from "../../assets/client3.png";
+import client4 from "../../assets/client4.png";
+import client5 from "../../assets/client5.png";
+import client6 from "../../assets/client6.png";
+import client7 from "../../assets/client7.png";
+import client8 from "../../assets/client8.png";
+import client9 from "../../assets/client9.png";
+
 import earth from "../../assets/earthbg.png";
 const Home = () => {
   const industries = [
@@ -229,7 +243,9 @@ const Home = () => {
           </div>
 
           <div className="cert-content">
-            <h4 className="cert-subtitle"><span className="orange">#</span>OUR CERTIFICATIONS</h4>
+            <h4 className="cert-subtitle">
+              <span className="orange">#</span>OUR CERTIFICATIONS
+            </h4>
             <h2 className="cert-title">
               Globally Recognized.
               <br />
@@ -241,6 +257,54 @@ const Home = () => {
               tested for excellence, and approved for safety compliance.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="recent-blogs">
+        <h2 className="section-title">
+          <span className="orange">#</span>RECENT BLOGS
+        </h2>
+
+        <div className="blogs-grid">
+          {/* Featured Blog */}
+          <div className="blog-card featured">
+            <img src={blog1} alt="Featured Blog" />
+            <div className="blog-info">
+              <div className="blog-meta">
+                <span className="blog-tag">Industry Updates</span>
+                <span className="blog-date">MAR 16, 2025</span>
+              </div>
+              <h3 className="blog-title">Offshore Container Trends in 2025</h3>
+            </div>
+          </div>
+
+          {/* Blog 2 */}
+          <div className="blog-card">
+            <img src={blog2} alt="Blog 2" />
+            <div className="blog-info">
+              <div className="blog-meta">
+                <span className="blog-tag">Industry Updates</span>
+                <span className="blog-date">MAR 16, 2025</span>
+              </div>
+              <h3 className="blog-title">Offshore Container Trends in 2025</h3>
+            </div>
+          </div>
+
+          {/* Blog 3 */}
+          <div className="blog-card">
+            <img src={blog3} alt="Blog 3" />
+            <div className="blog-info">
+              <div className="blog-meta">
+                <span className="blog-tag">Safety & Compliance</span>
+                <span className="blog-date">MAR 16, 2025</span>
+              </div>
+              <h3 className="blog-title">DNV 2.7-1 Compliance Made Simple</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="blog-button">
+          <button className="hero-button">Explore All Blogs</button>
         </div>
       </section>
     </div>
