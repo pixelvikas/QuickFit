@@ -166,44 +166,71 @@ const Header = () => {
           <div className={`nav__menu ${menuOpen ? "show-menu" : ""}`}>
             <ul className="nav__list">
               <li>
-                <Link to="/" className="nav__link">
+                <Link
+                  to="/"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   HOME
                 </Link>
               </li>
-
               <li>
-                <Link to="/about" className="nav__link">
+                <Link
+                  to="/about"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   ABOUT US
                 </Link>
               </li>
-
               <li>
-                <Link to="/products" className="nav__link">
+                <Link
+                  to="/products"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   PRODUCTS
                 </Link>
               </li>
               <li>
-                <Link to="/industries" className="nav__link">
+                <Link
+                  to="/industries"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   INDUSTRIES
                 </Link>
               </li>
               <li>
-                <Link to="/blogs" className="nav__link">
+                <Link
+                  to="/blogs"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   BLOGS
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="nav__link">
+                <Link
+                  to="/gallery"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   GALLERY
                 </Link>
               </li>
               <li className="contact-hidden">
-                <Link to="/contact" className="nav__link">
+                <Link
+                  to="/contact"
+                  className="nav__link"
+                  onClick={() => setMenuOpen(false)}
+                >
                   CONTACT
                 </Link>
               </li>
             </ul>
           </div>
+
           <div className="nav__data">
             <ul className="nav__hidden contact-btn">
               <li>

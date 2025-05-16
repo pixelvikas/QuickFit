@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import {
   FaInstagram,
   FaFacebookF,
@@ -57,7 +56,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/*  dc dc dc  ad snmdasd    asdna smdd a>?oasab asdjjasdd na snas nd, a,sdas,m asamdd ammmddkmk nas  n s d,asdd    m fasmda, */}
         <div className="footer-right">
           <div className="footer-links">
             <h4>Quick Links</h4>
