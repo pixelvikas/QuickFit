@@ -426,24 +426,7 @@ const Home = () => {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.hero-button {
-  background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: fit-content;
-}
 
-.hero-button:hover,
-.hero-button:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(222, 3, 3, 0.3);
-}
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
@@ -605,9 +588,6 @@ const Home = () => {
     max-width: 100%;
   }
 
-  .hero-button {
-    width: auto;
-  }
 
   .hero-overlay {
     background: linear-gradient(

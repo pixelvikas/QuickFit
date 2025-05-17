@@ -68,7 +68,9 @@ const Contact = () => {
               <input type="email" placeholder="Email" required />
               <input type="text" placeholder="Subject" required />
               <textarea placeholder="Message" rows="4" required></textarea>
-              <button type="submit">Send Message</button>
+              <button className="hero-button" type="submit">
+                Send Message
+              </button>
             </form>
           </div>
         </div>
@@ -205,20 +207,6 @@ const Contact = () => {
   resize: vertical;
 }
 
-.contact-form button {
-  background-color: #ff5c00;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #e04d00;
-}
 
 /* Map Section */
 .map-section {
@@ -282,10 +270,7 @@ const Contact = () => {
     padding: 10px;
   }
 
-  .contact-form button {
-    font-size: 13px;
-    padding: 10px 16px;
-  }
+ 
 }
 `}
       </style>

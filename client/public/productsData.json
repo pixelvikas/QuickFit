@@ -1,0 +1,74 @@
+{
+    "categories": [
+    "All",
+    "Offshore Container",
+    "Offshore Basket",
+    "Offshore Cylinder Rack",
+    "Offshore GP Waste Skip",
+    "Offshore Tool basket and wireline boxes",
+    "Offshore Tool Boxes",
+    "Open Top Container",
+    "Offshore AFT Fuel Tank",
+    "Gas Bottle Quad",
+    "Onshore Pallet Rack",
+    "Oil & Gas Drill Bit Rack Pipe Rack",
+    "Offshore Pallet Rack",
+    "Offshore GP Tool Box"
+],
+"products": [
+    {
+        "id": 1,
+        "img": "6 ft Offshore Mini Container - 01.png",
+        "title": "10FT CSC/DNV OFFSHORE",
+        "description": "High-quality offshore container certified for harsh environments",
+        "category": "Offshore Container",
+        "features": [
+            "DNV Certified",
+            "6ft length",
+            "Corrosion resistant",
+            "Stackable design"
+        ],
+        "rating": 4.8,
+        "reviews": 24,
+        "price": "$4,200 - $5,800",
+        "leadTime": "2-3 weeks",
+        "capacity": "10 cubic meters"
+    },
+    {
+        "id": 2,
+        "img": "6 ft Offshore Mini Shelved Container - 01.png",
+        "title": "10FT CSC/DNV SHELVED",
+        "description": "Shelved container for organized offshore equipment storage",
+        "category": "Offshore Container",
+        "features": [
+            "CSC Certified",
+            "Adjustable shelves",
+            "Heavy-duty construction",
+            "Weatherproof"
+        ],
+        "rating": 4.5,
+        "reviews": 18,
+        "price": "$4,800 - $6,200",
+        "leadTime": "3-4 weeks",
+        "capacity": "9 cubic meters"
+    },
+    {
+        "id": 3,
+        "img": "10 ft DNV CSC Offshore Container - 01.png",
+        "title": "DRILL MUD CUTTING SKIPS",
+        "description": "Specialized container for drill mud and cutting storage",
+        "category": "Offshore GP Waste Skip",
+        "features": [
+            "Leak-proof",
+            "Easy cleaning",
+            "Forklift pockets",
+            "DNV Certified"
+        ],
+        "rating": 4.7,
+        "reviews": 32,
+        "price": "$5,500 - $7,000",
+        "leadTime": "4-5 weeks",
+        "capacity": "12 cubic meters"
+    }
+]
+}
