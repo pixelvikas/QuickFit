@@ -406,9 +406,7 @@ const Home = () => {
   letter-spacing: 1px;
 }
 
-.orange {
-  color: #ff4500;
-}
+
 
 .hero-content h1 {
   font-size: clamp(32px, 5vw, 46px);

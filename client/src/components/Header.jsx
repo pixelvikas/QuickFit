@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import {
+  RiArrowDownSLine,
+  RiUserLine,
+  RiLockLine,
+  RiLeafLine,
+  RiShieldUserLine,
+} from "react-icons/ri";
 import QuickFitLogo from "../assets/quickfitlogo.png";
 import {
   RiPlanetLine,
   RiMenuLine,
   RiCloseLine,
-  RiArrowDownSLine,
   RiAddLine,
   RiPieChartLine,
-  RiArrowUpDownLine,
 } from "react-icons/ri";
 
 const Header = () => {
@@ -22,6 +26,10 @@ const Header = () => {
 
   const toggleReports = () => {
     setReportsOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -166,65 +174,77 @@ const Header = () => {
           <div className={`nav__menu ${menuOpen ? "show-menu" : ""}`}>
             <ul className="nav__list">
               <li>
-                <Link
-                  to="/"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link to="/" className="nav__link" onClick={closeMenu}>
                   HOME
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/about"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link to="/about" className="nav__link" onClick={closeMenu}>
                   ABOUT US
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/products"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link to="/products" className="nav__link" onClick={closeMenu}>
                   PRODUCTS
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/industries"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+              <li className="dropdown__item">
+                <div className="nav__link">
                   INDUSTRIES
-                </Link>
+                  <RiArrowDownSLine className="dropdown__arrow" />
+                </div>
+
+                <ul className="dropdown__menu">
+                  <li>
+                    <Link
+                      to="/industries/oil-gas-offshore"
+                      className="dropdown__link"
+                      onClick={closeMenu}
+                    >
+                      Oil &amp; Gas Offshore
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/industries/shipping-containers"
+                      className="dropdown__link"
+                      onClick={closeMenu}
+                    >
+                      Shipping Containers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/industries/renewable-energy"
+                      className="dropdown__link"
+                      onClick={closeMenu}
+                    >
+                      Renewable Energy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/industries/naval-defense-sectors"
+                      className="dropdown__link"
+                      onClick={closeMenu}
+                    >
+                      Naval &amp; Defense Sectors
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li>
-                <Link
-                  to="/blogs"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link to="/blogs" className="nav__link" onClick={closeMenu}>
                   BLOGS
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/gallery"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link to="/gallery" className="nav__link" onClick={closeMenu}>
                   GALLERY
                 </Link>
               </li>
               <li className="contact-hidden">
-                <Link
-                  to="/contact"
-                  className="nav__link"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <Link to="/contact" className="nav__link" onClick={closeMenu}>
                   CONTACT
                 </Link>
               </li>
@@ -234,7 +254,7 @@ const Header = () => {
           <div className="nav__data">
             <ul className="nav__hidden contact-btn">
               <li>
-                <Link to="/contact" className="nav__link">
+                <Link to="/contact" className="nav__link" onClick={closeMenu}>
                   CONTACT US
                 </Link>
               </li>

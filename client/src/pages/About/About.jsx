@@ -385,9 +385,6 @@ const About = () => {
   margin: auto;
 }
 
-.orange {
-  color: #ff4500;
-}
 
 .section-tag {
   color: #000;

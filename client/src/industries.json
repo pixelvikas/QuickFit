@@ -1,0 +1,26 @@
+[
+    {
+        "industryName": "Oil & Gas Offshore",
+        "subtitle": "Engineering Solutions for Deepwater Operations",
+        "backgroundImage": "industry1bg.png",
+        "description": "Providing technology and infrastructure support for offshore drilling, exploration, and production platforms in the oil and gas sector."
+    },
+    {
+        "industryName": "Shipping Containers",
+        "subtitle": "Streamlining Global Cargo Movement",
+        "backgroundImage": "industry2bg.png",
+        "description": "Delivering logistics, tracking, and container management solutions to optimize the global transportation of goods by sea and land."
+    },
+    {
+        "industryName": "Renewable Energy",
+        "subtitle": "Powering a Sustainable Future",
+        "backgroundImage": "industry3bg.png",
+        "description": "Supporting the renewable energy sector with smart grid technologies, monitoring systems, and resource optimization for solar, wind, and hydro power."
+    },
+    {
+        "industryName": "Naval & Defense Sectors",
+        "subtitle": "Advanced Solutions for Maritime and Defense",
+        "backgroundImage": "industry4bg.png",
+        "description": "Enabling defense and naval operations through integrated systems for fleet monitoring, mission control, communication, and cybersecurity."
+    }
+]
