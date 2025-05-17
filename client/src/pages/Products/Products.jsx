@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import productsData from "../../../public/productsData.json";
+import productsData from "../../productsData.json";
 import productHero from "../../assets/producthero.jpg"; // adjust the path based on your file structure
 
 // Import icons
