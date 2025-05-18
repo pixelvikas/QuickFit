@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "image": "blog1.png",
+        "tag": "Industry Updates",
+        "date": "MAR 17, 2025",
+        "title": "Offshore Container Trends in 2025",
+        "excerpt": "Explore the emerging trends shaping the offshore container industry this year and beyond.",
+        "description": "Offshore containers are evolving with technology and sustainability. Here’s a closer look at the biggest trends shaping the market in 2025.",
+        "pointers": [
+            "Increased demand for modular container systems",
+            "Sustainability driving design innovations",
+            "Automation integration in offshore logistics"
+        ],
+        "paragraphs": [
+            "The offshore container industry is undergoing a rapid transformation, fueled by sustainability goals and smarter technologies. Companies are shifting to lighter, stronger materials that reduce emissions and enhance efficiency.",
+            "Digital tools and IoT integration are making containers smarter, with real-time monitoring of temperature, pressure, and location becoming a standard.",
+            "As demand grows globally, especially in renewable sectors, 2025 promises a major shift in how offshore equipment is designed, deployed, and maintained."
+        ]
+    },
+    {
+        "id": 2,
+        "image": "blog2.png",
+        "tag": "Safety & Compliance",
+        "date": "MAR 17, 2025",
+        "title": "DNV 2.7-1 Compliance Made Simple",
+        "excerpt": "A comprehensive guide to understanding and implementing DNV 2.7-1 standards.",
+        "description": "Understanding DNV 2.7-1 standards is crucial for offshore safety. This guide breaks it down for easy implementation.",
+        "pointers": [
+            "What DNV 2.7-1 means for container safety",
+            "Step-by-step checklist for compliance",
+            "Common mistakes and how to avoid them"
+        ],
+        "paragraphs": [
+            "DNV 2.7-1 is a globally recognized standard for offshore containers, covering design, testing, and certification. Meeting these standards ensures safety in extreme marine environments.",
+            "Start with ensuring your container has proper material certification, and work through load testing and weld inspections. Documentation must align with DNV protocols.",
+            "Non-compliance can delay operations and increase insurance liabilities. Partnering with certified inspectors simplifies the process and ensures reliability."
+        ]
+    },
+    {
+        "id": 3,
+        "image": "blog3.png",
+        "tag": "Quickfit News",
+        "date": "MAR 16, 2025",
+        "title": "Quickfit Expands Global Manufacturing Footprint",
+        "excerpt": "Announcing our new production facilities to better serve our international clients.",
+        "description": "To meet growing demand and ensure faster delivery, Quickfit is scaling operations with new state-of-the-art manufacturing hubs.",
+        "pointers": [
+            "New facilities in UAE, Singapore, and Brazil",
+            "Increased production capacity by 60%",
+            "Enhanced logistics for faster global delivery"
+        ],
+        "paragraphs": [
+            "Quickfit is proud to announce the expansion of its global manufacturing capabilities, with new facilities strategically located in high-demand regions.",
+            "This move enables us to reduce lead times, improve quality control, and better serve our customers worldwide with custom offshore container solutions.",
+            "Each facility is equipped with advanced robotics and AI-driven inspection systems to maintain the highest quality and compliance standards."
+        ]
+    }
+]
