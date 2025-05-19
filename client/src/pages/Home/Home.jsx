@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaUserTie, FaCertificate, FaGlobeAmericas } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { FaArrowRightLong } from "react-icons/fa6";
+
+import { Link, useNavigate } from "react-router-dom";
 
 import herobg from "../../assets/homehero.png";
 
@@ -34,13 +36,40 @@ import client7 from "../../assets/client7.png";
 import client8 from "../../assets/client8.png";
 import client9 from "../../assets/client9.png";
 
+import productsData from "../../productsData.json";
+import blogsData from "../../blogData.json";
+
 import earth from "../../assets/earthbg.png";
 const Home = () => {
+  const navigate = useNavigate();
+  const { products } = productsData;
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    setBlogs(blogsData); // Direct import from JSON file
+  }, []);
+
   const industries = [
-    { image: i1, label: "Oil & Gas Offshore" },
-    { image: i2, label: "Shipping Containers" },
-    { image: i3, label: "Renewable Energy" },
-    { image: i4, label: "Naval & Defense Sectors" },
+    {
+      image: i1,
+      label: "Oil & Gas Offshore",
+      link: "/industries/oil-gas-offshore",
+    },
+    {
+      image: i2,
+      label: "Shipping Containers",
+      link: "/industries/shipping-containers",
+    },
+    {
+      image: i3,
+      label: "Renewable Energy",
+      link: "/industries/renewable-energy",
+    },
+    {
+      image: i4,
+      label: "Naval & Defense Sectors",
+      link: "/industries/naval-defense-sectors",
+    },
   ];
 
   const clients = [
@@ -58,6 +87,24 @@ const Home = () => {
   // Duplicate the list for seamless infinite loop
   const allClients = [...clients, ...clients];
 
+  const handleExploreClick = () => {
+    navigate("/products");
+  };
+  const handleExploreAbout = () => {
+    navigate("/about");
+  };
+
+  const getImageUrl = (imageName) => {
+    return new URL(`../../assets/${imageName}`, import.meta.url).href;
+  };
+
+  const handleBlogClick = (title) => {
+    const slug = title
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/\s+/g, "-");
+    navigate(`/blogs/${slug}`);
+  };
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -83,7 +130,9 @@ const Home = () => {
               Premium Offshore Containers & Equipment Trusted by Global
               Industries
             </p>
-            <button className="hero-button">Explore Products</button>
+            <button className="hero-button" onClick={handleExploreClick}>
+              Explore Products
+            </button>
           </div>
         </div>
 
@@ -133,46 +182,28 @@ const Home = () => {
         </div>
 
         <div className="product-cards">
-          <div className="product-card">
-            <div className="card-image-wrapper">
-              <h1 className="card-number">01</h1>
-              <img
-                src={p1}
-                alt="Offshore Container"
-                className="product-image"
-              />
-              <div className="card-caption">MINI OFFSHORE CONTAINER</div>
-            </div>
-          </div>
-
-          <div className="product-card">
-            <div className="card-image-wrapper">
-              <h1 className="card-number">02</h1>
-              <img
-                src={p2}
-                alt="Offshore Waste Skip"
-                className="product-image"
-              />
-              <div className="card-caption">
-                MINI SHELVED OFFSHORE CONTAINER
+          {products.slice(0, 3).map((product, index) => (
+            <Link to={product.link}>
+              <div className="product-card" key={product.id}>
+                <div className="card-image-wrapper">
+                  <h1 className="card-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </h1>
+                  <img
+                    src={getImageUrl(product.img)}
+                    alt={product.title}
+                    className="product-image"
+                  />
+                  <div className="card-caption">{product.title}</div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="product-card">
-            <div className="card-image-wrapper">
-              <h1 className="card-number">03</h1>
-              <img
-                src={p3}
-                alt="Offshore Half Height Basket"
-                className="product-image"
-              />
-              <div className="card-caption">DNV CSC OFFSHORE CONTAINER</div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
 
-        <button className="hero-button">Explore All Products</button>
+        <button className="hero-button" onClick={handleExploreClick}>
+          Explore All Products
+        </button>
       </section>
 
       <section className="since-section">
@@ -195,7 +226,9 @@ const Home = () => {
               delivered high-performance solutions for energy, marine, and
               industrial sectors.
             </p>
-            <button className="hero-button">More About Quickfit</button>
+            <button className="hero-button" onClick={handleExploreAbout}>
+              More About Quickfit
+            </button>
           </div>
         </div>
       </section>
@@ -234,16 +267,18 @@ const Home = () => {
 
         <div className="industry-grid">
           {industries.map((industry, index) => (
-            <div className="industry-card" key={index}>
-              <div className="image-container">
-                <img src={industry.image} alt={industry.label} />
-                <div className="icon-overlay">
-                  <FaArrowRightLong className="icon" />
+            <Link to={industry.link}>
+              <div className="industry-card" key={index}>
+                <div className="image-container">
+                  <img src={industry.image} alt={industry.label} />
+                  <div className="icon-overlay">
+                    <FaArrowRightLong className="icon" />
+                  </div>
                 </div>
+                <h3 className="label">{industry.label}</h3>
+                <div className="underline"></div>
               </div>
-              <h3 className="label">{industry.label}</h3>
-              <div className="underline"></div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -281,45 +316,28 @@ const Home = () => {
         </h2>
 
         <div className="blogs-grid">
-          {/* Featured Blog */}
-          <div className="blog-card featured">
-            <img src={blog1} alt="Featured Blog" />
-            <div className="blog-info">
-              <div className="blog-meta">
-                <span className="blog-tag">Industry Updates</span>
-                <span className="blog-date">MAR 16, 2025</span>
+          {blogs.slice(0, 3).map((blog, index) => (
+            <div
+              className={`blog-card ${index === 0 ? "featured" : ""}`}
+              key={blog.id}
+              onClick={() => handleBlogClick(blog.title)}
+            >
+              <img src={getImageUrl(blog.image)} alt={blog.title} />
+              <div className="blog-info">
+                <div className="blog-meta">
+                  <span className="blog-tag">{blog.tag}</span>
+                  <span className="blog-date">{blog.date}</span>
+                </div>
+                <h3 className="blog-title">{blog.title}</h3>
               </div>
-              <h3 className="blog-title">Offshore Container Trends in 2025</h3>
             </div>
-          </div>
-
-          {/* Blog 2 */}
-          <div className="blog-card">
-            <img src={blog2} alt="Blog 2" />
-            <div className="blog-info">
-              <div className="blog-meta">
-                <span className="blog-tag">Industry Updates</span>
-                <span className="blog-date">MAR 16, 2025</span>
-              </div>
-              <h3 className="blog-title">Offshore Container Trends in 2025</h3>
-            </div>
-          </div>
-
-          {/* Blog 3 */}
-          <div className="blog-card">
-            <img src={blog3} alt="Blog 3" />
-            <div className="blog-info">
-              <div className="blog-meta">
-                <span className="blog-tag">Safety & Compliance</span>
-                <span className="blog-date">MAR 16, 2025</span>
-              </div>
-              <h3 className="blog-title">DNV 2.7-1 Compliance Made Simple</h3>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="blog-button">
-          <button className="hero-button">Explore All Blogs</button>
+          <button className="hero-button" onClick={() => navigate("/blogs")}>
+            Explore All Blogs
+          </button>
         </div>
       </section>
 
@@ -813,8 +831,9 @@ const Home = () => {
 .since-heading {
   font-size: 12rem;
   font-weight: 700;
-  color: transparent;
-  -webkit-text-stroke: 2px #ff4500;
+  background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -1194,76 +1213,6 @@ const Home = () => {
 
   .featured {
     grid-column: span 1;
-  }
-}
-.trusted-clients {
-  padding: 1rem;
-  overflow: hidden;
-  background-color: white;
-}
-
-.clients-title {
-  font-size: 14px;
-  color: #000;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.carousel-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Main animation */
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 25s linear infinite;
-}
-
-/* Pause the animation if any child is hovered */
-.carousel-track:hover {
-  animation-play-state: paused;
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-  padding: 0 30px;
-  filter: grayscale(1);
-  transition: filter 0.3s ease;
-}
-
-.carousel-item img {
-  height: 60px;
-  width: auto;
-  display: block;
-}
-
-/* Remove grayscale on hover */
-.carousel-item:hover {
-  filter: grayscale(0);
-}
-
-/* Keyframe animation */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .carousel-item {
-    padding: 0 15px;
-  }
-
-  .carousel-item img {
-    height: 90px;
   }
 }
 `}

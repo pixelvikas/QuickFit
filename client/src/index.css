@@ -653,7 +653,6 @@ html {
 .carousel-item {
   flex: 0 0 auto;
   padding: 0 30px;
-  filter: grayscale(1);
   transition: filter 0.3s ease;
 }
 
@@ -661,11 +660,6 @@ html {
   height: 60px;
   width: auto;
   display: block;
-}
-
-/* Remove grayscale on hover */
-.carousel-item:hover {
-  filter: grayscale(0);
 }
 
 /* Keyframe animation */
