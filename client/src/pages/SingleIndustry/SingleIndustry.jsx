@@ -14,27 +14,12 @@ import i3 from "../../assets/renewable.png";
 import i4 from "../../assets/naval.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-import "./style.css";
-
 // React icons
 import { FiStar } from "react-icons/fi";
 
-// Define the base path for assets
-const ASSETS_BASE_PATH = "../../assets/";
-
 // Utility function to get complete image URL
 const getImageUrl = (imageName) => {
-  try {
-    // For development (using import.meta.url)
-    if (import.meta.url) {
-      return new URL(`${ASSETS_BASE_PATH}${imageName}`, import.meta.url).href;
-    }
-    // For production (using require)
-    return require(`${ASSETS_BASE_PATH}${imageName}`).default;
-  } catch (error) {
-    console.error(`Error loading image: ${imageName}`, error);
-    return ""; // Return empty string or a placeholder image path
-  }
+  return new URL(`../../assets/${imageName}`, import.meta.url).href;
 };
 
 // Predefined industry background images
@@ -317,6 +302,133 @@ const SingleIndustry = () => {
             </div>
           ))}
         </div>
+        <style>
+          {`
+          .single-industry {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  color: #333;
+}
+
+.industry-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.industry-title {
+  font-size: 28px;
+  background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+
+.industry-subtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+.industry-image-wrapper {
+  margin: 20px 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.industry-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.industry-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.product-box {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.industry-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.industry-card {
+  width: 220px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 123, 255, 0.5); /* Transparent blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.industry-card:hover .icon-overlay {
+  opacity: 1;
+}
+
+.icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+.label {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.underline {
+  width: 40px;
+  height: 2px;
+  background-color: #f15a24;
+  margin: 6px auto 0;
+}
+`}
+        </style>
       </div>
     </>
   );

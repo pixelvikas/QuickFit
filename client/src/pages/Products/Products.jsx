@@ -294,7 +294,7 @@ const Products = () => {
                     ({quickViewProduct.reviews} reviews)
                   </span>
                 </div>
-                <div className="price-range">{quickViewProduct.price}</div>
+
                 <p className="product-description">
                   {quickViewProduct.description}
                 </p>
@@ -340,14 +340,12 @@ const Products = () => {
                 </div>
 
                 <div className="modal-actions">
-                  <button className="modal-quote-btn">
-                    Request Custom Quote
-                  </button>
+                  <button className="quote-btn">Get a Quote</button>
                   <button
                     className="modal-contact-btn"
                     onClick={() => viewDetails(quickViewProduct.id)}
                   >
-                    View Full Details
+                    View Details
                   </button>
                 </div>
               </div>
