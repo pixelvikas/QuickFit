@@ -317,7 +317,9 @@ const About = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+ background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .since-container {
@@ -330,19 +332,14 @@ const About = () => {
 
 .arrow-icon {
   font-size: 10vw; /* Responsive to screen width */
-  color: #ff6f00; /* Bright orange */
+  color: #ff4500; /* Bright orange */
   transform: rotate(-40deg); /* Diagonal arrow */
 }
 
 .since-text {
   font-size: 10vw; /* Responsive to screen width */
   font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 2px #ff6f00;
-  text-stroke: 1px #ff6f00;
-  text-transform: lowercase;
   margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 /* Tablet view */
