@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import productsData from "../../productsData.json";
-import productHero from "../../assets/producthero.jpg"; // adjust the path based on your file structure
+import productHero from "../../assets/producthero.jpg";
 
 // Import icons
 import {
@@ -13,6 +13,9 @@ import {
   FiMail,
   FiPhone,
   FiMapPin,
+  FiX,
+  FiArrowRight,
+  FiCheckCircle,
 } from "react-icons/fi";
 import {
   FaShippingFast,
@@ -26,19 +29,23 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({ categories: [], products: [] });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    quantity: 1,
+    message: "",
+  });
+  const [currentProduct, setCurrentProduct] = useState(null);
 
   useEffect(() => {
     // Simulate API fetch
     const fetchData = async () => {
       try {
-        // In a real app, you would fetch from an API endpoint
-        // const response = await fetch('/api/products');
-        // const data = await response.json();
-
-        // Using imported JSON for this example
         setData(productsData);
         setIsLoading(false);
       } catch (error) {
@@ -89,6 +96,55 @@ const Products = () => {
     setQuickViewProduct(null);
     document.body.style.overflow = "auto";
   };
+  const getImageUrl = (imageName) => {
+    try {
+      // For Vite or Create React App
+      return new URL(`../../assets/${imageName}`, import.meta.url).href;
+    } catch (err) {
+      console.error("Error loading image:", err);
+      // Return a default image if the specific image fails to load
+      return new URL(`../../assets/default-product.jpg`, import.meta.url).href;
+    }
+  };
+
+  const handleCustomQuote = () => {
+    navigate("/contact");
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/product-catalog.pdf";
+    link.download = "Product-Catalog.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleSubmitQuote = (e) => {
+    e.preventDefault();
+    console.log("Quote request submitted:", formData);
+    setShowQuoteModal(false);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      quantity: 1,
+      message: "",
+    });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const openQuoteModal = (product) => {
+    setCurrentProduct(product);
+    setShowQuoteModal(true);
+  };
 
   if (isLoading) {
     return (
@@ -98,10 +154,6 @@ const Products = () => {
       </div>
     );
   }
-
-  const getImageUrl = (imageName) => {
-    return new URL(`../../assets/${imageName}`, import.meta.url).href;
-  };
 
   return (
     <div className="products-page">
@@ -155,7 +207,10 @@ const Products = () => {
                     className={`category-btn ${
                       activeCategory === cat ? "active" : ""
                     }`}
-                    onClick={() => setActiveCategory(cat)}
+                    onClick={() => {
+                      setActiveCategory(cat);
+                      setShowMobileFilters(false);
+                    }}
                   >
                     {cat}
                     <span className="product-count">
@@ -187,7 +242,9 @@ const Products = () => {
                 <span>123 Marine Way, Houston, TX</span>
               </div>
             </div>
-            <button className="contact-button">Request Custom Quote</button>
+            <button className="contact-button" onClick={handleCustomQuote}>
+              Request Custom Quote
+            </button>
           </div>
         </div>
 
@@ -223,14 +280,11 @@ const Products = () => {
               {filteredProducts.map((product) => (
                 <div className="product-card" key={product.id}>
                   <div className="product-image-container">
-                    <img src={getImageUrl(product.img)} alt={product.title} />
-
-                    <button
-                      className="quick-view-btn"
-                      onClick={() => openQuickView(product)}
-                    >
-                      Quick View
-                    </button>
+                    <img
+                      src={getImageUrl(product.img)}
+                      alt={product.title}
+                      loading="lazy"
+                    />
                   </div>
                   <div className="product-info">
                     <div className="product-rating">
@@ -239,7 +293,6 @@ const Products = () => {
                       <span className="reviews">({product.reviews})</span>
                     </div>
                     <h3>{product.title}</h3>
-                    <p className="product-category">{product.category}</p>
                     <p className="product-description">{product.description}</p>
 
                     <div className="product-features">
@@ -251,7 +304,12 @@ const Products = () => {
                     </div>
 
                     <div className="product-actions">
-                      <button className="quote-btn">Get a Quote</button>
+                      <button
+                        className="quote-btn"
+                        onClick={() => openQuoteModal(product)}
+                      >
+                        Get a Quote
+                      </button>
                       <button
                         className="details-btn"
                         onClick={() => viewDetails(product.id)}
@@ -315,9 +373,9 @@ const Products = () => {
                       </span>
                     </div>
                     <div className="spec-item">
-                      <span className="spec-label">Category:</span>
+                      <span className="spec-label">Price Range:</span>
                       <span className="spec-value">
-                        {quickViewProduct.category}
+                        {quickViewProduct.price}
                       </span>
                     </div>
                     <div className="spec-item">
@@ -332,7 +390,7 @@ const Products = () => {
                   <ul className="features-list">
                     {quickViewProduct.features.map((feature, i) => (
                       <li key={i}>
-                        <span className="feature-check">✓</span>
+                        <FiCheckCircle className="feature-check" />
                         {feature}
                       </li>
                     ))}
@@ -340,7 +398,15 @@ const Products = () => {
                 </div>
 
                 <div className="modal-actions">
-                  <button className="quote-btn">Get a Quote</button>
+                  <button
+                    className="quote-btn"
+                    onClick={() => {
+                      closeQuickView();
+                      openQuoteModal(quickViewProduct);
+                    }}
+                  >
+                    Get a Quote
+                  </button>
                   <button
                     className="modal-contact-btn"
                     onClick={() => viewDetails(quickViewProduct.id)}
@@ -349,6 +415,121 @@ const Products = () => {
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quick Quote Modal */}
+      {showQuoteModal && currentProduct && (
+        <div className="modal-overlay">
+          <div className="quick-quote-modal">
+            <button
+              className="close-modal"
+              onClick={() => setShowQuoteModal(false)}
+              aria-label="Close modal"
+            >
+              <FiX size={24} />
+            </button>
+
+            <div className="modal-content">
+              <div className="modal-product-info">
+                <div className="modal-image-wrapper">
+                  <img
+                    src={getImageUrl(currentProduct.img)}
+                    alt={currentProduct.title}
+                    className="modal-product-image"
+                    onError={(e) => {
+                      e.target.src = defaultProductImage;
+                    }}
+                  />
+                </div>
+                <div className="modal-product-details">
+                  <h3>{currentProduct.title}</h3>
+                  <p className="product-category">{currentProduct.category}</p>
+                  <div className="modal-features">
+                    {currentProduct.features
+                      .slice(0, 3)
+                      .map((feature, index) => (
+                        <div key={index} className="modal-feature-item">
+                          <FiCheckCircle className="modal-feature-icon" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+
+              <form className="quote-form" onSubmit={handleSubmitQuote}>
+                <h3>Request a Quick Quote</h3>
+
+                <div className="form-group">
+                  <label htmlFor="name">Full Name*</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">Email*</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="Enter your email address"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="quantity">Quantity</label>
+                  <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    value={formData.quantity}
+                    onChange={handleInputChange}
+                    placeholder="1"
+                  />
+                </div>
+
+                <div className="form-group full-width">
+                  <label htmlFor="message">Additional Requirements</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Please specify any special requirements, modifications, or certifications needed"
+                  />
+                </div>
+
+                <button type="submit" className="submit-quote-btn">
+                  Submit Quote Request <FiArrowRight className="btn-icon" />
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -388,10 +569,12 @@ const Products = () => {
             exact specifications
           </p>
           <div className="cta-buttons">
-            <button className="cta-primary">
+            <button className="cta-primary" onClick={handleCustomQuote}>
               Request a Design Consultation
             </button>
-            <button className="cta-secondary">Download Product Catalog</button>
+            <button className="cta-secondary" onClick={handleDownload}>
+              Download Product Catalog
+            </button>
           </div>
         </div>
       </div>
@@ -711,11 +894,7 @@ body {
   margin-top: 10px;
 }
 
-.contact-button:hover {
-  background: var(--secondary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
+
 `}
       </style>
     </div>

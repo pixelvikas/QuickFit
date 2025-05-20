@@ -34,8 +34,6 @@
                 "Naval & Defense Sectors"
             ],
             "rating": 4.8,
-            "reviews": 24,
-            "price": "$4,200 - $5,800",
             "leadTime": "2-3 weeks",
             "capacity": "10 cubic meters",
             "specifications": [
@@ -63,48 +61,6 @@
         },
         {
             "id": 2,
-            "img": "6 ft Offshore Mini Shelved Container - 01.png",
-            "link": "/products/2",
-            "title": "10FT CSC/DNV SHELVED",
-            "description": "Shelved container for organized offshore equipment storage",
-            "category": "Offshore Container",
-            "features": [
-                "CSC Certified",
-                "Adjustable shelves",
-                "Heavy-duty construction",
-                "Weatherproof"
-            ],
-            "industries": [
-                "Shipping Containers",
-                "Renewable Energy",
-                "Naval & Defense Sectors"
-            ],
-            "rating": 4.5,
-            "reviews": 18,
-            "price": "$4,800 - $6,200",
-            "leadTime": "3-4 weeks",
-            "capacity": "9 cubic meters",
-            "specifications": [
-                {
-                    "feature": "Material",
-                    "spec": "High-strength steel with marine-grade coating"
-                },
-                {
-                    "feature": "Shelving",
-                    "spec": "Adjustable and removable shelves"
-                },
-                {
-                    "feature": "Weather Resistance",
-                    "spec": "IP65 weatherproof compliance"
-                },
-                {
-                    "feature": "Security",
-                    "spec": "Pad-lockable double doors"
-                }
-            ]
-        },
-        {
-            "id": 3,
             "img": "10 ft DNV CSC Offshore Container - 01.png",
             "link": "/products/3",
             "title": "DRILL MUD CUTTING SKIPS",
