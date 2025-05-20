@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import AutoScroll from "./components/AutoScroll";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -18,6 +19,8 @@ import SingleBlog from "./pages/SingleBlog/SingleBlog";
 const App = () => {
   return (
     <BrowserRouter>
+      <AutoScroll />
+
       <Header />
 
       <Routes>
