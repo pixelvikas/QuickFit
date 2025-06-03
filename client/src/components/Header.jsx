@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   RiArrowDownSLine,
@@ -19,6 +19,19 @@ import {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [reportsOpen, setReportsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setReportsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -30,6 +43,11 @@ const Header = () => {
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+  const closeAllMenus = () => {
+    setMenuOpen(false);
+    setReportsOpen(false);
+    // Add more if needed
   };
 
   return (
@@ -188,51 +206,58 @@ const Header = () => {
                   PRODUCTS
                 </Link>
               </li>
-              <li className="dropdown__item">
+              <li
+                className="dropdown__item"
+                onMouseLeave={() => setReportsOpen(false)}
+                onMouseEnter={() => setReportsOpen(true)}
+              >
                 <div className="nav__link">
                   INDUSTRIES
                   <RiArrowDownSLine className="dropdown__arrow" />
                 </div>
 
-                <ul className="dropdown__menu">
-                  <li>
-                    <Link
-                      to="/industries/oil-gas-offshore"
-                      className="dropdown__link"
-                      onClick={closeMenu}
-                    >
-                      Oil &amp; Gas Offshore
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/industries/shipping-containers"
-                      className="dropdown__link"
-                      onClick={closeMenu}
-                    >
-                      Shipping Containers
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/industries/renewable-energy"
-                      className="dropdown__link"
-                      onClick={closeMenu}
-                    >
-                      Renewable Energy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/industries/naval-defense-sectors"
-                      className="dropdown__link"
-                      onClick={closeMenu}
-                    >
-                      Naval &amp; Defense Sectors
-                    </Link>
-                  </li>
-                </ul>
+                {reportsOpen && (
+                  <ul className="dropdown__menu">
+                    <li>
+                      <Link
+                        to="/industries/oil-gas-offshore"
+                        className="dropdown__link"
+                        onClick={closeAllMenus}
+                      >
+                        Oil &amp; Gas Offshore
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/industries/shipping-containers"
+                        className="dropdown__link"
+                        onClick={closeAllMenus}
+                      >
+                        Shipping Containers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/industries/renewable-energy"
+                        className="dropdown__link"
+                        onClick={closeAllMenus}
+                      >
+                        Renewable Energy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/industries/naval-defense-sectors"
+                        className="dropdown__link"
+                        onClick={closeAllMenus}
+                      >
+                        Naval &amp; Defense Sectors
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
+
               <li>
                 <Link to="/blogs" className="nav__link" onClick={closeMenu}>
                   BLOGS
