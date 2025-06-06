@@ -106,14 +106,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="since-section">
-        <div className="since-container">
-          <div className="arrow-icon">
-            <FaArrowRightLong />
-          </div>
-          <h1 className="since-text">since 1962</h1>
-        </div>
-      </section>
 
       <section className="progress-section">
         <h4 className="section-tag">

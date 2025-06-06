@@ -77,13 +77,13 @@ html {
 }
 
 .nav__logo img {
-  width: 115px;
+  width: 140px;
   height: auto;
 }
 
 @media (max-width: 1024px) {
   .nav__logo img {
-    width: 90px;
+    width: 100px;
   }
   .nav__logo h1 {
     font-size: 1.3rem;
@@ -92,7 +92,7 @@ html {
 
 @media (max-width: 768px) {
   .nav__logo img {
-    width: 95px;
+    width: 100px;
   }
   .nav__logo h1 {
     font-size: 1.1rem;
@@ -101,7 +101,7 @@ html {
 
 @media (max-width: 480px) {
   .nav__logo img {
-    width: 95px;
+    width: 100px;
   }
 }
 
@@ -372,15 +372,14 @@ html {
 
 /* Header Top Styles */
 .header-top {
-  background-color: #f8f9fa;
-  padding: 8px 0;
+  background-color: #00254a;
+  color: #fff;
+  padding: 15px 0;
   display: flex;
-  border-bottom: 1px solid #e1e1e1;
-  font-size: 12px;
+  font-size: 15px;
   align-items: center;
   align-content: center;
-  justify-content: space-between;
-  padding: 5px;
+  justify-content: space-around;
 }
 
 .certifications {
@@ -401,7 +400,7 @@ html {
   width: 24px;
   height: 16px;
   object-fit: cover;
-  border: 1px solid #ddd;
+
   transition: transform 0.2s ease;
 }
 

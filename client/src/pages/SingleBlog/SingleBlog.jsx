@@ -220,7 +220,7 @@ body {
 
 /* Main Container */
 .single-blog-container {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: var(--space-xl);
   position: relative;

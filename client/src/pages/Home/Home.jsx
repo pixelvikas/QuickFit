@@ -7,11 +7,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 import herobg from "../../assets/homehero.png";
 
-import p1 from "../../assets/6 ft Offshore Mini Container - 01.png";
-import p2 from "../../assets/6 ft Offshore Mini Shelved Container - 01.png";
-import p3 from "../../assets/10 ft DNV CSC Offshore Container - 01.png";
-import p4 from "../../assets/20 ft DNV CSC Offshore Container - 01.png";
-
 import i1 from "../../assets/oil&gas.png";
 import i2 from "../../assets/shipping.png";
 import i3 from "../../assets/renewable.png";
@@ -22,10 +17,6 @@ import c2 from "../../assets/cert2.png";
 import c3 from "../../assets/cert3.png";
 import c4 from "../../assets/cert4.png";
 
-import blog1 from "../../assets/blog1.png";
-import blog2 from "../../assets/blog2.png";
-import blog3 from "../../assets/blog3.png";
-
 import client1 from "../../assets/client1.png";
 import client2 from "../../assets/client2.png";
 import client3 from "../../assets/client3.png";
@@ -35,6 +26,16 @@ import client6 from "../../assets/client6.png";
 import client7 from "../../assets/client7.png";
 import client8 from "../../assets/client8.png";
 import client9 from "../../assets/client9.png";
+import client10 from "../../assets/client10.png";
+import client11 from "../../assets/client11.png";
+import client12 from "../../assets/client12.png";
+import client13 from "../../assets/client13.png";
+import client14 from "../../assets/client14.png";
+import client15 from "../../assets/client15.png";
+import client16 from "../../assets/client16.png";
+import client17 from "../../assets/client17.png";
+import client18 from "../../assets/client18.png";
+import client19 from "../../assets/client19.png";
 
 import productsData from "../../productsData.json";
 import blogsData from "../../blogData.json";
@@ -57,21 +58,20 @@ const Home = () => {
     },
     {
       image: i2,
-      label: "Shipping Containers",
-      link: "/industries/shipping-containers",
+      label: "Offshore Containers",
+      link: "/industries/offshore-containers",
     },
     {
       image: i3,
-      label: "Renewable Energy",
-      link: "/industries/renewable-energy",
+      label: "Offshore Wind Energy",
+      link: "/industries/offshore-wind-energy",
     },
     {
       image: i4,
-      label: "Naval & Defense Sectors",
-      link: "/industries/naval-defense-sectors",
+      label: "Military & Defense Industries",
+      link: "/industries/military-defense-industries",
     },
   ];
-
   const clients = [
     client1,
     client2,
@@ -82,6 +82,16 @@ const Home = () => {
     client7,
     client8,
     client9,
+    client10,
+    client11,
+    client12,
+    client13,
+    client14,
+    client15,
+    client16,
+    client17,
+    client18,
+    client19,
   ];
 
   // Duplicate the list for seamless infinite loop
@@ -207,8 +217,6 @@ const Home = () => {
       </section>
 
       <section className="since-section">
-        <div className="since-heading">since 1962</div>
-
         <div className="since-content">
           <div className="arrow-icon">
             <MdArrowOutward />
@@ -374,8 +382,7 @@ const Home = () => {
 .hero-bg-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 700px; /* Increased minimum height */
+  height: 80vh;
   max-height: 1400px; /* Increased maximum height */
   overflow: hidden;
 }
@@ -447,7 +454,7 @@ const Home = () => {
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .hero-bg-wrapper {
-    height: 90vh; /* Increased height for tablet */
+    height: 80vh; /* Increased height for tablet */
     min-height: 800px; /* Taller minimum height */
   }
 
@@ -596,7 +603,7 @@ const Home = () => {
 
 @media (max-width: 768px) {
   .hero-bg-wrapper {
-    height: 95vh;
+    height: 85vh;
     min-height: 400px;
   }
 
@@ -989,7 +996,7 @@ const Home = () => {
 }
 
 .industry-card {
-  width: 220px;
+  width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -1039,6 +1046,7 @@ const Home = () => {
   margin-top: 16px;
   font-size: 16px;
   font-weight: 500;
+  color: #000;
 }
 
 .underline {
@@ -1214,6 +1222,11 @@ const Home = () => {
   .featured {
     grid-column: span 1;
   }
+
+  
+.industry-card {
+  width: 220px;
+        }
 }
 `}
       </style>

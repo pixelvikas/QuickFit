@@ -20,80 +20,461 @@
             "id": 1,
             "img": "6 ft Offshore Mini Container - 01.png",
             "link": "/products/1",
-            "title": "10FT CSC/DNV OFFSHORE",
-            "description": "High-quality offshore container certified for harsh environments",
+            "title": "6 ft Offshore Mini Container",
+            "shortDescription": "DNV-certified compact container for offshore operations",
+            "description": "The 6 ft Offshore Mini Container is engineered for maximum durability in harsh marine environments. Featuring a corrosion-resistant steel construction and stackable design, this container meets rigorous DNV 2.7-1 standards for offshore use. Ideal for transporting sensitive equipment to offshore platforms, naval vessels, and remote installations.",
             "category": "Offshore Container",
             "features": [
-                "DNV Certified",
-                "6ft length",
-                "Corrosion resistant",
-                "Stackable design"
+                {
+                    "title": "DNV 2.7-1 Certified",
+                    "description": "Meets stringent offshore container standards"
+                },
+                {
+                    "title": "Corrosion Protection",
+                    "description": " -dip galvanized steel with marine-grade coating"
+                },
+                {
+                    "title": "Space Efficient",
+                    "description": "Compact 6ft design with optimal storage capacity"
+                },
+                {
+                    "title": "Safety Compliant",
+                    "description": "ISO 10855 compliant lifting and securing points"
+                }
             ],
             "industries": [
                 "Oil & Gas Offshore",
-                "Naval & Defense Sectors"
+                "Military & Defense Industries"
             ],
-            "rating": 4.8,
             "leadTime": "2-3 weeks",
             "capacity": "10 cubic meters",
-            "specifications": [
-                {
-                    "feature": "Material",
-                    "spec": "High-strength steel with marine-grade coating"
+            "specifications": {
+                "dimensions": {
+                    "external": "1650 × 1920 × 2450 mm",
+                    "internal": "1430 × 1760 × 1994 mm",
+                    "shipping": "Standard 20ft container (4 units)"
                 },
-                {
-                    "feature": "Size Options",
-                    "spec": "10ft / 20ft / 40ft / Custom"
+                "weights": {
+                    "tare": "1250 kg",
+                    "payload": "3800 kg",
+                    "gross": "5050 kg"
                 },
-                {
-                    "feature": "Weight Capacity",
-                    "spec": "Up to 30,000 kg"
-                },
-                {
-                    "feature": "Lifting Points",
-                    "spec": "Reinforced pad eyes for offshore lifting"
-                },
-                {
-                    "feature": "Customization",
-                    "spec": "Internal shelving, insulation, ATEX compliance, ventilation"
+                "performance": {
+                    "capacity": "4.94 m³",
+                    "stackability": "Up to 6 high when empty",
+                    "temperature": "-40°C to +60°C"
                 }
-            ]
+            },
+            "leadTime": "2-3 weeks",
+            "warranty": "5 years structural"
         },
         {
             "id": 2,
-            "img": "10 ft DNV CSC Offshore Container - 01.png",
+            "img": "6 ft Offshore Mini Shelved Container - 01.png",
             "link": "/products/2",
-            "title": "DRILL MUD CUTTING SKIPS",
-            "description": "Specialized container for drill mud and cutting storage",
-            "category": "Offshore GP Waste Skip",
+            "title": "6 ft Offshore Mini Shelved Container",
+            "shortDescription": "Compact 6-foot offshore container with shelving, optimized for efficient storage and transport.",
+            "description": "The 6 ft Mini Shelved Offshore Container is engineered for offshore applications, featuring robust construction and internal shelving to facilitate organized storage in compact spaces. Designed to meet offshore safety and durability standards.",
+            "category": "Offshore Container",
             "features": [
-                "Leak-proof",
-                "Easy cleaning",
-                "Forklift pockets",
-                "DNV Certified"
+                {
+                    "title": "External Dimensions",
+                    "description": "1770 x 1920 x 2916 mm (5.8' x 6.2' x 9.5' ft)"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "1530 x 1760 x 2460 mm (5' x 5.7' x 8' ft)"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "6020 Kgs (13271 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "6.62 m³"
+                }
             ],
             "industries": [
+                "Offshore Containers",
                 "Oil & Gas Offshore"
             ],
-            "rating": 4.7,
-            "reviews": 32,
-            "price": "$5,500 - $7,000",
-            "leadTime": "4-5 weeks",
-            "capacity": "12 cubic meters",
-            "specifications": [
-                {
-                    "feature": "Construction",
-                    "spec": "Seam-welded steel body with reinforced floor"
+            "leadTime": "Standard lead time applies",
+            "capacity": "6.62 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "1770 x 1920 x 2916 mm (5.8' x 6.2' x 9.5')",
+                    "internal": "1530 x 1760 x 2460 mm (5' x 5.7' x 8')",
+                    "shipping": "N/A"
                 },
-                {
-                    "feature": "Leakproof Design",
-                    "spec": "Compliant with offshore environmental standards"
+                "weights": {
+                    "tare": "1520 Kgs (3351 Lbs)",
+                    "payload": "4500 Kgs (9920 Lbs)",
+                    "gross": "6020 Kgs (13271 Lbs)"
                 },
-                {
-                    "feature": "Handling",
-                    "spec": "Forklift pockets and lifting pad eyes"
+                "performance": {
+                    "capacity": "6.62 m³",
+                    "stackability": "Standard Offshore Stackable",
+                    "temperature": "N/A"
                 }
-            ]
+            },
+            "warranty": "12 months against manufacturing defects"
+        },
+        {
+            "id": 3,
+            "img": "10 ft DNV CSC Offshore Container - 01.png",
+            "link": "/products/3",
+            "title": "10 ft DNV CSC Offshore Container",
+            "shortDescription": "Heavy-duty DNV-certified 10 ft offshore container suitable for harsh offshore environments.",
+            "description": "The 10 ft DNV CSC Offshore Container is a robust, certified solution for offshore transport and storage. Designed with high structural integrity, it meets DNV 2.7-1 and CSC standards, making it ideal for oil & gas and maritime operations. Its ample capacity and durable build ensure reliability in demanding conditions.",
+            "category": "Offshore Container",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "2991 x 2438 x 2591 mm (10' x 8' x 8.6' ft)"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "2719 x 2224 x 2276 mm (8.7' x 7.3' x 7.4' ft)"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "10400 Kgs (22928 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "14 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "Standard lead time applies",
+            "capacity": "14 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2991 x 2438 x 2591 mm (10' x 8' x 8.6')",
+                    "internal": "2719 x 2224 x 2276 mm (8.7' x 7.3' x 7.4')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "2400 Kgs (5291 Lbs)",
+                    "payload": "8000 Kgs (17636 Lbs)",
+                    "gross": "10400 Kgs (22928 Lbs)"
+                },
+                "performance": {
+                    "capacity": "14 m³",
+                    "stackability": "DNV 2.7-1 stackable",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "12 months against manufacturing defects"
+        },
+        {
+            "id": 4,
+            "img": "20 ft DNV CSC Offshore Container - 01.png",
+            "link": "/products/4",
+            "title": "20 ft DNV CSC Offshore Container",
+            "shortDescription": "High-capacity 20 ft DNV-certified offshore container designed for durable and secure offshore transport.",
+            "description": "The 20 ft DNV CSC Offshore Container is engineered for offshore environments, offering high payload capacity and durable construction. Certified to DNV 2.7-1 and CSC standards, it ensures safe handling and stackability for critical logistics in oil & gas operations. Its spacious interior and solid frame make it ideal for bulk transport and storage offshore.",
+            "category": "Offshore Container",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "6058 x 2438 x 2591 mm (20' x 8' x 8.6' ft)"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "5686 x 2224 x 2178 mm (18.6' x 7.3' x 7.1' ft)"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "19000 Kgs (41887 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "27.54 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "Standard lead time applies",
+            "capacity": "27.54 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "6058 x 2438 x 2591 mm (20' x 8' x 8.6')",
+                    "internal": "5686 x 2224 x 2178 mm (18.6' x 7.3' x 7.1')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "4000 Kgs (8818 Lbs)",
+                    "payload": "15000 Kgs (33069 Lbs)",
+                    "gross": "19000 Kgs (41887 Lbs)"
+                },
+                "performance": {
+                    "capacity": "27.54 m³",
+                    "stackability": "DNV 2.7-1 stackable",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "12 months against manufacturing defects"
+        },
+        {
+            "id": 5,
+            "img": "4 ft Offshore Tool Basket - 01.png",
+            "link": "/products/5",
+            "title": "4 ft Offshore Tool Basket",
+            "shortDescription": "Compact offshore cargo basket suitable for small tool transport with certified lifting capacity.",
+            "description": "The 4 ft Offshore Tool Basket is built for transporting smaller tools and equipment in offshore environments. Compact yet sturdy, it meets offshore handling requirements and ensures reliable performance in harsh conditions. With certified weight capacity and optimal internal volume, it's a go-to choice for operational flexibility.",
+            "category": "Offshore Basket",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "1200 x 1200 x 1266 mm (4' x 4' x 4')"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "1000 x 1000 x 950 mm (2.6' x 2.6' x 2.6')"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "2490 Kgs (5489 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "0.91 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "Typically 2–3 weeks",
+            "capacity": "0.91 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "1200 x 1200 x 1266 mm (4' x 4' x 4')",
+                    "internal": "1000 x 1000 x 950 mm (2.6' x 2.6' x 2.6')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "490 Kgs (1080 Lbs)",
+                    "payload": "2000 Kgs (4409 Lbs)",
+                    "gross": "2490 Kgs (5489 Lbs)"
+                },
+                "performance": {
+                    "capacity": "0.91 m³",
+                    "stackability": "Yes (within offshore standards)",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "1-year manufacturing warranty"
+        },
+        {
+            "id": 6,
+            "img": "10 ft Offshore Tool Basket - 01.png",
+            "link": "/products/6",
+            "title": "10 ft Offshore Tool Basket",
+            "shortDescription": "High-capacity offshore basket ideal for transporting long or bulky tools and equipment.",
+            "description": "The 10 ft Offshore Tool Basket is engineered for secure offshore transport of elongated or bulk tools. Constructed to DNV standards, it offers optimal space, strength, and weight capacity. Designed for rough offshore environments, it ensures dependable performance during lifting and storage operations.",
+            "category": "Offshore Basket",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "2991 x 1200 x 1250 mm (10' x 4' x 4')"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "2791 x 1000 x 900 mm (9.1' x 3.2' x 3')"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "4845 Kgs (10681 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "2.5 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "Typically 2–3 weeks",
+            "capacity": "2.5 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2991 x 1200 x 1250 mm (10' x 4' x 4')",
+                    "internal": "2791 x 1000 x 900 mm (9.1' x 3.2' x 3')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "845 Kgs (1862 Lbs)",
+                    "payload": "4000 Kgs (8818 Lbs)",
+                    "gross": "4845 Kgs (10681 Lbs)"
+                },
+                "performance": {
+                    "capacity": "2.5 m³",
+                    "stackability": "Yes (DNV-compliant stackability)",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "1-year manufacturing warranty"
+        },
+        {
+            "id": 7,
+            "img": "15 ft Offshore Tool Basket - 01.png",
+            "link": "/products/7",
+            "title": "15 ft Offshore Tool Basket",
+            "shortDescription": "Large-capacity offshore basket designed for transporting extended tools and equipment in offshore operations.",
+            "description": "The 15 ft Offshore Tool Basket provides ample space and strength for transporting elongated and heavy-duty tools across offshore platforms. Fabricated to DNV standards, it ensures secure handling in rough sea environments while maximizing operational efficiency with increased volume.",
+            "category": "Offshore Basket",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "4600 x 1200 x 1250 mm (15' x 4' x 4')"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "4400 x 1000 x 900 mm (14.4' x 3.2' x 3')"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "5775 Kgs (12731 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "3.96 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "Typically 3–4 weeks",
+            "capacity": "3.96 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "4600 x 1200 x 1250 mm (15' x 4' x 4')",
+                    "internal": "4400 x 1000 x 900 mm (14.4' x 3.2' x 3')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "1275 Kgs (2810 Lbs)",
+                    "payload": "4500 Kgs (9920 Lbs)",
+                    "gross": "5775 Kgs (12731 Lbs)"
+                },
+                "performance": {
+                    "capacity": "3.96 m³",
+                    "stackability": "Yes (suitable for DNV stackable storage)",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "1-year manufacturing warranty"
+        },
+        {
+            "id": 8,
+            "img": "23 ft Offshore Tool Rack Basket - 01.png",
+            "link": "/products/8",
+            "title": "23 ft Offshore Tool Rack Basket",
+            "shortDescription": "High-capacity offshore basket designed for long, oversized tools used in oil & gas operations.",
+            "description": "The 23 ft Offshore Tool Rack Basket is a durable offshore handling solution designed to transport long tools and equipment securely across offshore platforms. Built to meet offshore industry safety and performance standards, it provides optimal storage with a 3.46 m³ volume capacity.",
+            "category": "Offshore Basket",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "7120 x 1220 x 850 mm (23' x 4' x 2.7')"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "6800 x 1020 x 500 mm (22' x 3.3' x 1.6')"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "8120 Kgs (17900 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "3.46 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "4–6 weeks",
+            "capacity": "3.46 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "7120 x 1220 x 850 mm (23' x 4' x 2.7')",
+                    "internal": "6800 x 1020 x 500 mm (22' x 3.3' x 1.6')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "2120 Kgs (4670 Lbs)",
+                    "payload": "6000 Kgs (13230 Lbs)",
+                    "gross": "8120 Kgs (17900 Lbs)"
+                },
+                "performance": {
+                    "capacity": "3.46 m³",
+                    "stackability": "Yes",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "1-year standard warranty"
+        },
+        {
+            "id": 9,
+            "img": "40 ft Offshore Tool Basket - 01.png",
+            "link": "/products/9",
+            "title": "40 ft Offshore Tool Basket",
+            "shortDescription": "Heavy-duty offshore cargo basket ideal for transporting large and long equipment with high payload capacity.",
+            "description": "The 40 ft Offshore Tool Basket is engineered for robust offshore handling and transportation. It is specifically designed to accommodate large tools and equipment while ensuring safety, durability, and efficiency in marine and oilfield environments. This model features a spacious 9.1 m³ volume and high load-bearing strength.",
+            "category": "Offshore Basket",
+            "features": [
+                {
+                    "title": "External Dimensions",
+                    "description": "11900 x 1200 x 1132 mm (39' x 4' x 4')"
+                },
+                {
+                    "title": "Internal Dimensions",
+                    "description": "11700 x 1000 x 780 mm (38.4' x 3.3' x 2.5')"
+                },
+                {
+                    "title": "Maximum Gross Weight",
+                    "description": "13100 Kgs (28770 Lbs)"
+                },
+                {
+                    "title": "Volume Capacity",
+                    "description": "9.1 m³"
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "6–8 weeks",
+            "capacity": "9.1 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "11900 x 1200 x 1132 mm (39' x 4' x 4')",
+                    "internal": "11700 x 1000 x 780 mm (38.4' x 3.3' x 2.5')",
+                    "shipping": "N/A"
+                },
+                "weights": {
+                    "tare": "2600 Kgs (5732 Lbs)",
+                    "payload": "10500 Kgs (23148 Lbs)",
+                    "gross": "13100 Kgs (28770 Lbs)"
+                },
+                "performance": {
+                    "capacity": "9.1 m³",
+                    "stackability": "Yes",
+                    "temperature": "N/A"
+                }
+            },
+            "warranty": "1-year standard warranty"
         }
     ]
 }

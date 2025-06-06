@@ -22,6 +22,8 @@ import {
   FaCertificate,
   FaShieldAlt,
   FaWhatsapp,
+  FaBox,
+  FaTemperatureLow,
 } from "react-icons/fa";
 
 const Products = () => {
@@ -30,7 +32,6 @@ const Products = () => {
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [showQuoteModal, setShowQuoteModal] = useState(false);
-  const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({ categories: [], products: [] });
   const [formData, setFormData] = useState({
@@ -43,7 +44,6 @@ const Products = () => {
   const [currentProduct, setCurrentProduct] = useState(null);
 
   useEffect(() => {
-    // Simulate API fetch
     const fetchData = async () => {
       try {
         setData(productsData);
@@ -57,7 +57,6 @@ const Products = () => {
     fetchData();
   }, []);
 
-  // Calculate product counts per category
   const getProductCounts = () => {
     const counts = {};
     data.categories.forEach((cat) => {
@@ -71,11 +70,10 @@ const Products = () => {
 
   const productCounts = getProductCounts();
 
-  // Filter products based on search term and active category
   const filteredProducts = data.products.filter((product) => {
     const matchesSearch =
       product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchTerm.toLowerCase());
+      product.shortDescription.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesCategory =
       activeCategory === "All" || product.category === activeCategory;
@@ -83,41 +81,17 @@ const Products = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const openQuickView = (product) => {
-    setQuickViewProduct(product);
-    document.body.style.overflow = "hidden";
-  };
-
   const viewDetails = (productId) => {
     navigate(`/products/${productId}`);
   };
 
-  const closeQuickView = () => {
-    setQuickViewProduct(null);
-    document.body.style.overflow = "auto";
-  };
   const getImageUrl = (imageName) => {
     try {
-      // For Vite or Create React App
       return new URL(`../../assets/${imageName}`, import.meta.url).href;
     } catch (err) {
       console.error("Error loading image:", err);
-      // Return a default image if the specific image fails to load
       return new URL(`../../assets/default-product.jpg`, import.meta.url).href;
     }
-  };
-
-  const handleCustomQuote = () => {
-    navigate("/contact");
-  };
-
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/product-catalog.pdf";
-    link.download = "Product-Catalog.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   const handleSubmitQuote = (e) => {
@@ -154,6 +128,18 @@ const Products = () => {
       </div>
     );
   }
+  const handleCustomQuote = () => {
+    navigate("/contact");
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/product-catalog.pdf";
+    link.download = "Product-Catalog.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="products-page">
@@ -242,7 +228,10 @@ const Products = () => {
                 <span>123 Marine Way, Houston, TX</span>
               </div>
             </div>
-            <button className="contact-button" onClick={handleCustomQuote}>
+            <button
+              className="contact-button"
+              onClick={() => navigate("/contact")}
+            >
               Request Custom Quote
             </button>
           </div>
@@ -287,19 +276,16 @@ const Products = () => {
                     />
                   </div>
                   <div className="product-info">
-                    <div className="product-rating">
-                      <FiStar className="star-icon" />
-                      <span>{product.rating}</span>
-                      <span className="reviews">({product.reviews})</span>
-                    </div>
                     <h3>{product.title}</h3>
-                    <p className="product-description">{product.description}</p>
+                    <p className="product-description">
+                      {product.shortDescription}
+                    </p>
 
                     <div className="product-features">
                       {product.features.slice(0, 3).map((feature, i) => (
-                        <span key={i} className="feature-tag">
-                          {feature}
-                        </span>
+                        <div key={i} className="feature-tag">
+                          <span>{feature.title}</span>
+                        </div>
                       ))}
                     </div>
 
@@ -325,101 +311,6 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Quick View Modal */}
-      {quickViewProduct && (
-        <div className="quick-view-modal">
-          <div className="modal-overlay" onClick={closeQuickView}></div>
-          <div className="modal-content">
-            <button className="close-modal" onClick={closeQuickView}>
-              &times;
-            </button>
-            <div className="modal-grid">
-              <div className="modal-images">
-                <div className="main-image">
-                  <img
-                    src={getImageUrl(quickViewProduct.img)}
-                    alt={quickViewProduct.title}
-                  />
-                </div>
-              </div>
-              <div className="modal-details">
-                <h2>{quickViewProduct.title}</h2>
-                <p className="product-category">{quickViewProduct.category}</p>
-                <div className="product-rating">
-                  <FiStar className="star-icon" />
-                  <span>{quickViewProduct.rating}</span>
-                  <span className="reviews">
-                    ({quickViewProduct.reviews} reviews)
-                  </span>
-                </div>
-
-                <p className="product-description">
-                  {quickViewProduct.description}
-                </p>
-
-                <div className="specs-section">
-                  <h3>Specifications</h3>
-                  <div className="specs-grid">
-                    <div className="spec-item">
-                      <span className="spec-label">Capacity:</span>
-                      <span className="spec-value">
-                        {quickViewProduct.capacity}
-                      </span>
-                    </div>
-                    <div className="spec-item">
-                      <span className="spec-label">Lead Time:</span>
-                      <span className="spec-value">
-                        {quickViewProduct.leadTime}
-                      </span>
-                    </div>
-                    <div className="spec-item">
-                      <span className="spec-label">Price Range:</span>
-                      <span className="spec-value">
-                        {quickViewProduct.price}
-                      </span>
-                    </div>
-                    <div className="spec-item">
-                      <span className="spec-label">Material:</span>
-                      <span className="spec-value">Marine-grade steel</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="features-section">
-                  <h3>Key Features</h3>
-                  <ul className="features-list">
-                    {quickViewProduct.features.map((feature, i) => (
-                      <li key={i}>
-                        <FiCheckCircle className="feature-check" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="modal-actions">
-                  <button
-                    className="quote-btn"
-                    onClick={() => {
-                      closeQuickView();
-                      openQuoteModal(quickViewProduct);
-                    }}
-                  >
-                    Get a Quote
-                  </button>
-                  <button
-                    className="modal-contact-btn"
-                    onClick={() => viewDetails(quickViewProduct.id)}
-                  >
-                    View Details
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Quick Quote Modal */}
       {showQuoteModal && currentProduct && (
         <div className="modal-overlay">
@@ -439,23 +330,38 @@ const Products = () => {
                     src={getImageUrl(currentProduct.img)}
                     alt={currentProduct.title}
                     className="modal-product-image"
-                    onError={(e) => {
-                      e.target.src = defaultProductImage;
-                    }}
                   />
                 </div>
                 <div className="modal-product-details">
                   <h3>{currentProduct.title}</h3>
                   <p className="product-category">{currentProduct.category}</p>
+
+                  <div className="modal-specs">
+                    <div className="spec-item">
+                      <strong>Capacity:</strong> {currentProduct.capacity}
+                    </div>
+                    <div className="spec-item">
+                      <strong>Lead Time:</strong> {currentProduct.leadTime}
+                    </div>
+                    <div className="spec-item">
+                      <strong>Warranty:</strong> {currentProduct.warranty}
+                    </div>
+                    <div className="spec-item">
+                      <strong>Dimensions:</strong>{" "}
+                      {currentProduct.specifications.dimensions.external}
+                    </div>
+                  </div>
+
                   <div className="modal-features">
-                    {currentProduct.features
-                      .slice(0, 3)
-                      .map((feature, index) => (
-                        <div key={index} className="modal-feature-item">
-                          <FiCheckCircle className="modal-feature-icon" />
-                          <span>{feature}</span>
+                    {currentProduct.features.map((feature, index) => (
+                      <div key={index} className="modal-feature-item">
+                        <FiCheckCircle className="modal-feature-icon" />
+                        <div>
+                          <strong>{feature.title}</strong>
+                          <p>{feature.description}</p>
                         </div>
-                      ))}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -581,7 +487,7 @@ const Products = () => {
 
       <style>
         {`
-        :root {
+       :root {
   --primary: #01284e;
   --primary-dark: #001a33;
   --primary-light: #e6f0fa;
@@ -597,9 +503,10 @@ const Products = () => {
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
   --shadow-large: 0 12px 28px rgba(0, 0, 0, 0.15);
-  --transition: all 0.3s ease;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   --border-radius: 8px;
   --border-radius-lg: 12px;
+  --sidebar-width: 300px;
 }
 
 * {
@@ -609,6 +516,7 @@ const Products = () => {
 }
 
 body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   color: var(--dark);
   background-color: var(--light);
@@ -618,20 +526,21 @@ body {
 .products-page {
   max-width: 1800px;
   margin: 0 auto;
-  padding: 1rem;
-  }
-  
-  /* Hero Section */
-  .products-hero {
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+  padding: 1.5rem;
+}
+
+/* Enhanced Hero Section */
+.products-hero {
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
   text-align: center;
-  padding: 100px 20px;
-  margin-bottom: 50px;
+  padding: 120px 20px;
+  margin-bottom: 3rem;
   border-radius: var(--border-radius-lg);
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .products-hero::before {
@@ -643,8 +552,8 @@ body {
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(1, 40, 78, 0.1) 0%,
-    rgba(0, 26, 51, 0.4) 100%
+    rgba(1, 40, 78, 0.2) 0%,
+    rgba(0, 26, 51, 0.6) 100%
   );
 }
 
@@ -653,49 +562,74 @@ body {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .products-hero h1 {
-  font-size: 2.75rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .products-hero p {
-  font-size: 1.25rem;
-  margin: 0 auto 30px;
+  font-size: 1.3rem;
+  margin: 0 auto 2.5rem;
   max-width: 700px;
   opacity: 0.9;
+  font-weight: 300;
 }
 
 .hero-badges {
   display: flex;
   justify-content: center;
-  gap: 7px;
+  gap: 10px;
   flex-wrap: wrap;
+  animation: fadeIn 1s ease 0.3s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .hero-badges span {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
-  padding: 8px 20px;
+  backdrop-filter: blur(8px);
+  padding: 8px 22px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: var(--transition);
+}
+
+.hero-badges span:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
 }
 
 /* Main Container */
 .products-container {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
-/* Mobile Filter Button */
+/* Mobile Filter Button - Enhanced */
 .mobile-filter-btn {
   display: none;
   align-items: center;
@@ -703,78 +637,118 @@ body {
   background: var(--primary);
   color: var(--white);
   border: none;
-  padding: 14px 24px;
+  padding: 1rem 1.5rem;
   border-radius: var(--border-radius);
   cursor: pointer;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
   width: 100%;
   justify-content: center;
   transition: var(--transition);
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-filter-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
 }
 
 .mobile-filter-btn:hover {
   background: var(--primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
 }
 
-/* Sidebar */
+.mobile-filter-btn:hover::after {
+  left: 100%;
+}
+
+/* Sidebar - Enhanced */
 .sidebar {
-  width: 300px;
+  width: var(--sidebar-width);
   background: var(--white);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow);
-  padding: 25px;
+  padding: 1.5rem;
   height: fit-content;
   position: sticky;
-  top: 30px;
+  top: 1.5rem;
+  transition: var(--transition);
 }
 
 .sidebar-title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 18px;
-  padding-bottom: 12px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+.sidebar-title::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: 50%;
+}
+
+/* Enhanced Search Box */
 .search-box {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .search-box input {
   width: 100%;
-  padding: 12px 15px 12px 45px;
+  padding: 0.9rem 1rem 0.9rem 3rem;
   border: 1px solid var(--light-gray);
   border-radius: var(--border-radius);
   font-size: 0.95rem;
   transition: var(--transition);
   background: var(--light);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .search-box input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(1, 40, 78, 0.2);
+  box-shadow: 0 0 0 3px rgba(1, 40, 78, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.05);
   background: var(--white);
 }
 
 .search-icon {
   position: absolute;
-  left: 18px;
+  left: 1.1rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--gray);
   font-size: 1.1rem;
 }
 
+/* Enhanced Filter Sections */
 .filter-section {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.5s ease;
 }
 
 .category-list {
@@ -784,7 +758,7 @@ body {
 }
 
 .category-list li {
-  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
 }
 
 .category-btn {
@@ -792,7 +766,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 15px;
+  padding: 0.8rem 1rem;
   font-size: 0.95rem;
   cursor: pointer;
   border-radius: var(--border-radius);
@@ -801,101 +775,264 @@ body {
   border: none;
   text-align: left;
   color: var(--dark);
+  position: relative;
+}
+
+.category-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: var(--light-gray);
+  transition: var(--transition);
 }
 
 .category-btn:hover {
   background: var(--primary-light);
   color: var(--primary);
+  transform: translateX(5px);
+}
+
+.category-btn:hover::after {
+  left: 0.5rem;
+  right: 0.5rem;
 }
 
 .category-btn.active {
   background: var(--primary);
   color: var(--white);
   font-weight: 500;
+  transform: translateX(5px);
+}
+
+.category-btn.active::after {
+  opacity: 0;
 }
 
 .product-count {
   background: rgba(255, 255, 255, 0.2);
   color: inherit;
-  padding: 2px 8px;
+  padding: 0.2rem 0.6rem;
   border-radius: 10px;
   font-size: 0.8rem;
+  min-width: 28px;
+  text-align: center;
 }
 
 .category-btn.active .product-count {
   background: rgba(255, 255, 255, 0.3);
 }
 
+/* Enhanced Certification Badges */
 .certification-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .badge {
   background: var(--light-gray);
-  padding: 8px 15px;
-  border-radius: var(--border-radius);
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--primary-dark);
   cursor: pointer;
   transition: var(--transition);
   border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .badge:hover {
   background: var(--primary-light);
   border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .badge.active {
   background: var(--primary);
   color: var(--white);
+  box-shadow: var(--shadow);
 }
 
+/* Enhanced Contact Section */
 .contact-section {
-  margin-top: 40px;
-  padding-top: 25px;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--light-gray);
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.9rem;
+  gap: 1rem;
+  font-size: 0.95rem;
   color: var(--dark);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.contact-item:hover {
+  background: var(--primary-light);
+  transform: translateX(3px);
 }
 
 .contact-icon {
   color: var(--primary);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
+  width: 1.5rem;
+  text-align: center;
 }
 
+/* Enhanced Contact Button */
 .contact-button {
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
+  padding: 1rem;
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
   color: var(--white);
   border: none;
   border-radius: var(--border-radius);
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
-  margin-top: 10px;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
+.contact-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
 
-`}
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-button:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 2rem;
+    display: none;
+  }
+  
+  .sidebar.active {
+    display: block;
+    animation: slideDown 0.4s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .mobile-filter-btn {
+    display: flex;
+  }
+  
+  .products-hero {
+    padding: 80px 20px;
+  }
+  
+  .products-hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .products-hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-page {
+    padding: 1rem;
+  }
+  
+  .products-hero {
+    padding: 60px 15px;
+    margin-bottom: 2rem;
+  }
+  
+  .products-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-badges span {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .contact-button {
+    padding: 0.9rem;
+  }
+}
+
+/* Accessibility Improvements */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}`}
       </style>
     </div>
   );
