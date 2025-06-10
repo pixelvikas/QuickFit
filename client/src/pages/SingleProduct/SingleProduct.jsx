@@ -219,78 +219,92 @@ const SingleProduct = () => {
           {/* Specifications Table */}
           <div className="specs-section">
             <h3 className="section-title">Technical Specifications</h3>
-            <div className="specs-table">
-              <div className="specs-row">
-                <div className="specs-category">Dimensions</div>
-                <div className="specs-details">
-                  <div className="specs-item">
-                    <span className="specs-label">External:</span>
-                    <span className="specs-value">
+            <div className="modern-specs-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th className="header-category">Category</th>
+                    <th className="header-label">Specification</th>
+                    <th className="header-value">Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Dimensions Row Group */}
+                  <tr className="category-row">
+                    <td className="category-name" rowSpan="4">
+                      Dimensions
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">External</td>
+                    <td className="spec-value">
                       {product.specifications.dimensions.external}
-                    </span>
-                  </div>
-                  <div className="specs-item">
-                    <span className="specs-label">Internal:</span>
-                    <span className="specs-value">
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Internal</td>
+                    <td className="spec-value">
                       {product.specifications.dimensions.internal}
-                    </span>
-                  </div>
-                  <div className="specs-item">
-                    <span className="specs-label">Shipping:</span>
-                    <span className="specs-value">
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Shipping</td>
+                    <td className="spec-value">
                       {product.specifications.dimensions.shipping}
-                    </span>
-                  </div>
-                </div>
-              </div>
+                    </td>
+                  </tr>
 
-              <div className="specs-row">
-                <div className="specs-category">Weights</div>
-                <div className="specs-details">
-                  <div className="specs-item">
-                    <span className="specs-label">Tare Weight:</span>
-                    <span className="specs-value">
+                  {/* Weights Row Group */}
+                  <tr className="category-row">
+                    <td className="category-name" rowSpan="4">
+                      Weights
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Tare Weight</td>
+                    <td className="spec-value">
                       {product.specifications.weights.tare}
-                    </span>
-                  </div>
-                  <div className="specs-item">
-                    <span className="specs-label">Payload:</span>
-                    <span className="specs-value">
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Payload</td>
+                    <td className="spec-value">
                       {product.specifications.weights.payload}
-                    </span>
-                  </div>
-                  <div className="specs-item">
-                    <span className="specs-label">Gross Weight:</span>
-                    <span className="specs-value">
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Gross Weight</td>
+                    <td className="spec-value">
                       {product.specifications.weights.gross}
-                    </span>
-                  </div>
-                </div>
-              </div>
+                    </td>
+                  </tr>
 
-              <div className="specs-row">
-                <div className="specs-category">Performance</div>
-                <div className="specs-details">
-                  <div className="specs-item">
-                    <span className="specs-label">Capacity:</span>
-                    <span className="specs-value">
+                  {/* Performance Row Group */}
+                  <tr className="category-row">
+                    <td className="category-name" rowSpan="4">
+                      Performance
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Capacity</td>
+                    <td className="spec-value">
                       {product.specifications.performance.capacity}
-                    </span>
-                  </div>
-                  <div className="specs-item">
-                    <span className="specs-label">Stackability:</span>
-                    <span className="specs-value">
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Stackability</td>
+                    <td className="spec-value">
                       {product.specifications.performance.stackability}
-                    </span>
-                  </div>
-                  <div className="specs-item">
-                    <span className="specs-label">Temperature Range:</span>
-                    <span className="specs-value">
+                    </td>
+                  </tr>
+                  <tr className="spec-row">
+                    <td className="spec-label">Temperature Range</td>
+                    <td className="spec-value">
                       {product.specifications.performance.temperature}
-                    </span>
-                  </div>
-                </div>
-              </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -830,63 +844,127 @@ const SingleProduct = () => {
             border-radius: 2px;
           }
 
-          /* Specifications Table */
-          .specs-table {
-            display: grid;
-            gap: 1.25rem;
-            margin-bottom: 2.5rem;
+          /* Modern Specifications Table */
+
+          .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
           }
 
-          .specs-row {
-            display: flex;
-            background: #f8fafc;
+          .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
+            border-radius: 3px;
+          }
+
+          .modern-specs-table {
             border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            overflow-x: auto; /* enables scroll on smaller screens */
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             border: 1px solid #e2e8f0;
           }
 
-          .specs-row:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            border-color: #cbd5e0;
+          .modern-specs-table table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* ensures table structure doesn’t break on small screens */
           }
 
-          .specs-category {
-            flex: 0 0 200px;
-            background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
-            color: white;
-            padding: 1.25rem;
+          .modern-specs-table th {
+            text-align: left;
+          }
+
+          .header-category,
+          .header-label,
+          .header-value {
+            padding: 1rem 1.5rem;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
+            color: #ffffff;
+            background: linear-gradient(90deg, #ff6200 0%, #de0303 100%);
           }
 
-          .specs-details {
-            flex: 1;
-            padding: 1.25rem;
-            display: grid;
-            gap: 1rem;
+          .header-category {
+            width: 20%;
           }
 
-          .specs-item {
-            display: flex;
-            align-items: baseline;
+          .header-label {
+            width: 30%;
           }
 
-          .specs-label {
+          .category-row {
+            background-color: #f8fafc;
+          }
+
+          .category-name {
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            vertical-align: top;
+            border-right: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+          }
+
+          .spec-row {
+            transition: background-color 0.2s ease;
+          }
+
+          .spec-row:hover {
+            background-color: #f8fafc;
+          }
+
+          .spec-row:nth-child(even) {
+            background-color: #ffffff;
+          }
+
+          .spec-row:nth-child(even):hover {
+            background-color: #f8fafc;
+          }
+
+          .spec-label {
+            padding: 0.75rem 1.5rem;
             font-weight: 500;
             color: #4a5568;
-            min-width: 140px;
-            font-size: 0.95rem;
+            border-right: 1px solid #e2e8f0;
           }
 
-          .specs-value {
-            color: #2d3748;
+          .spec-value {
+            padding: 0.75rem 1.5rem;
             font-weight: 600;
-            font-size: 1rem;
+            color: #1a202c;
+          }
+
+          /* Responsive adjustments */
+          @media (max-width: 768px) {
+            .section-title {
+              font-size: 1.25rem;
+            }
+
+            .header-category,
+            .header-label,
+            .header-value,
+            .category-name,
+            .spec-label,
+            .spec-value {
+              padding: 0.75rem 1rem;
+              font-size: 0.9rem;
+            }
+
+            .modern-specs-table {
+              overflow-x: auto;
+            }
+
+            .modern-specs-table table {
+              min-width: 600px;
+            }
           }
 
           /* Description Section */

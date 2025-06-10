@@ -188,7 +188,7 @@ const SingleIndustry = () => {
                         className="quote-btn"
                         onClick={() => openQuoteModal(product)}
                       >
-                        Get a Quote
+                        Instant Quote
                       </button>
                       <button
                         className="details-btn"
