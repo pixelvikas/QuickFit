@@ -22,18 +22,19 @@ const Contact = () => {
               <div className="contact-box">
                 <h5>Location</h5>
                 <p>
-                  Guild Street 51, North Town,
+                  B 400, Oberoi Garden Business Prewmises, Chandivali Farm Road
+                  Andheri East,
                   <br />
-                  London-06192, UK
+                  Mumbai - 400072. Maharashtra. INDIA
                 </p>
               </div>
 
               <div className="contact-box">
                 <h5>Phone Number</h5>
                 <p>
-                  +1 (888) 123-5678
+                  +91 9869908422
                   <br />
-                  (+44)123 456 789
+                  +92 022-4751-0385
                 </p>
               </div>
 

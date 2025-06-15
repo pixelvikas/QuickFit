@@ -63,7 +63,7 @@ const Products = () => {
       counts[cat] =
         cat === "All"
           ? data.products.length
-          : data.products.filter((p) => p.category === cat).length;
+          : data.products.filter((p) => p.category.includes(cat)).length;
     });
     return counts;
   };
@@ -76,7 +76,7 @@ const Products = () => {
       product.shortDescription.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesCategory =
-      activeCategory === "All" || product.category === activeCategory;
+      activeCategory === "All" || product.category.includes(activeCategory);
 
     return matchesSearch && matchesCategory;
   });
@@ -334,7 +334,11 @@ const Products = () => {
                 </div>
                 <div className="modal-product-details">
                   <h3>{currentProduct.title}</h3>
-                  <p className="product-category">{currentProduct.category}</p>
+                  <p className="product-category">
+                    {Array.isArray(currentProduct.category)
+                      ? currentProduct.category.join(", ")
+                      : currentProduct.category}
+                  </p>
 
                   <div className="modal-specs">
                     <div className="spec-item">

@@ -2,18 +2,18 @@
     "categories": [
         "All",
         "Offshore Container",
-        "Offshore Basket",
-        "Offshore Cylinder Rack",
-        "Offshore GP Waste Skip",
-        "Offshore Tool basket and wireline boxes",
-        "Offshore Tool Boxes",
-        "Open Top Container",
-        "Offshore AFT Fuel Tank",
-        "Gas Bottle Quad",
-        "Onshore Pallet Rack",
-        "Oil & Gas Drill Bit Rack Pipe Rack",
-        "Offshore Pallet Rack",
-        "Offshore GP Tool Box"
+        "Offshore Cargo Basket",
+        "Offshore Tool Basket",
+        "Half Height Basket",
+        "Lifting Frame",
+        "13ft Waste Skip",
+        "Drill Mud Cutting Skip",
+        "Gas Cylinder Rack",
+        "Gas Cylinder Quad",
+        "Personal Work Basket",
+        "Drum Basket",
+        "Reefer Container",
+        "Metal Skip"
     ],
     "products": [
         {
@@ -172,8 +172,59 @@
         },
         {
             "id": 4,
-            "img": "20 ft DNV CSC Offshore Container - 01.png",
+            "img": "10 ft DNV Offshore Open Top Container 1.png",
             "link": "/products/4",
+            "title": "10 ft DNV Offshore Open Top Container",
+            "shortDescription": "Robust 10 ft DNV-certified open top container ideal for offshore applications with 15 m³ capacity.",
+            "description": "The 10 ft DNV Offshore Open Top Container is designed for the safe and efficient transport of cargo in offshore environments. Built with DNV 2.7-1 certification, it ensures maximum durability and performance in harsh maritime conditions. The open top feature allows for easy loading and unloading of oversized cargo using cranes.",
+            "category": "Offshore Container",
+            "features": [
+                {
+                    "title": "DNV 2.7-1 Certified",
+                    "description": "Fully compliant with offshore standards ensuring safe lifting and transport in offshore operations."
+                },
+                {
+                    "title": "Open Top Design",
+                    "description": "Facilitates easy loading of oversized items using cranes or other top-lift methods."
+                },
+                {
+                    "title": "Heavy Duty Construction",
+                    "description": "Built to withstand the extreme conditions of offshore environments with high payload capacity."
+                },
+                {
+                    "title": "Optimized Volume",
+                    "description": "Provides a 15 m³ cargo volume, ideal for compact yet high-capacity transport needs."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2–4 weeks",
+            "capacity": "15 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2991 x 2438 x 2591 mm (10' x 8' x 8.6' ft)",
+                    "internal": "2719 x 2224 x 2426 mm (8.7' x 7.3' x 7.4' ft)",
+                    "shipping": "15 m³"
+                },
+                "weights": {
+                    "tare": "2150 Kgs (4739 Lbs)",
+                    "payload": "10000 Kgs (22046 Lbs)",
+                    "gross": "12150 Kgs (26786 Lbs)"
+                },
+                "performance": {
+                    "capacity": "15 m³",
+                    "stackability": "Yes, standard offshore stacking",
+                    "temperature": "Suitable for offshore marine environments"
+                }
+            },
+            "warranty": "12 months against manufacturing defects"
+        },
+        {
+            "id": 5,
+            "img": "20 ft DNV CSC Offshore Container - 01.png",
+            "link": "/products/5",
             "title": "20 ft DNV CSC Offshore Container",
             "shortDescription": "High-capacity 20 ft DNV-certified offshore container designed for durable and secure offshore transport.",
             "description": "The 20 ft DNV CSC Offshore Container is engineered for offshore environments, offering high payload capacity and durable construction. Certified to DNV 2.7-1 and CSC standards, it ensures safe handling and stackability for critical logistics in oil & gas operations. Its spacious interior and solid frame make it ideal for bulk transport and storage offshore.",
@@ -222,13 +273,115 @@
             "warranty": "12 months against manufacturing defects"
         },
         {
-            "id": 5,
+            "id": 6,
+            "img": "20 ft DNV Open Top Container 1.png",
+            "link": "/products/6",
+            "title": "20 ft DNV Open Top Container",
+            "shortDescription": "Durable 20 ft DNV-certified open top container designed for offshore use with a spacious 30 m³ internal volume.",
+            "description": "The 20 ft DNV Open Top Container is engineered for offshore transport and storage of cargo, offering easy loading and unloading of oversized items. Certified to DNV 2.7-1 standards, it provides robust safety, high payload capacity, and resilience in extreme offshore environments. The open top allows for vertical crane loading, ideal for the oil & gas industry.",
+            "category": "Offshore Container",
+            "features": [
+                {
+                    "title": "DNV 2.7-1 Compliant",
+                    "description": "Engineered to meet DNV offshore safety standards for lifting and transportation."
+                },
+                {
+                    "title": "Open Top Accessibility",
+                    "description": "Topless structure enables easy crane access for loading tall or irregular cargo."
+                },
+                {
+                    "title": "High Load Capacity",
+                    "description": "Supports a payload of up to 12,000 Kgs (26,455 Lbs), suitable for demanding offshore logistics."
+                },
+                {
+                    "title": "Spacious Volume",
+                    "description": "With an internal capacity of 30 m³, it provides ample room for large equipment and materials."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "3–5 weeks",
+            "capacity": "30 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "6058 x 2438 x 2591 mm (20' x 8' x 8.6' ft)",
+                    "internal": "5686 x 2224 x 2380 mm (18.6' x 7.3' x 7.8' ft)",
+                    "shipping": "30 m³"
+                },
+                "weights": {
+                    "tare": "4040 Kgs (8906 Lbs)",
+                    "payload": "12000 Kgs (26455 Lbs)",
+                    "gross": "16040 Kgs (35362 Lbs)"
+                },
+                "performance": {
+                    "capacity": "30 m³",
+                    "stackability": "Yes, offshore stackable",
+                    "temperature": "Designed for offshore environmental conditions"
+                }
+            },
+            "warranty": "12 months against structural defects"
+        },
+        {
+            "id": 7,
+            "img": "27 ft DNV Offshore Open Top Container 1.png",
+            "link": "/products/7",
+            "title": "27 ft DNV Offshore Open Top Container",
+            "shortDescription": "High-capacity 27 ft DNV-certified open top container with 45.61 m³ volume for offshore transport of oversized cargo.",
+            "description": "The 27 ft DNV Offshore Open Top Container is built to accommodate large and irregular cargo in offshore operations. Certified to DNV 2.7-1 standards, it features a removable top for crane access, heavy-duty construction for extreme conditions, and is ideal for use in oil rigs and maritime environments.",
+            "category": "Offshore Container",
+            "features": [
+                {
+                    "title": "DNV 2.7-1 Offshore Certified",
+                    "description": "Meets strict offshore safety standards for lifting, stacking, and secure transport."
+                },
+                {
+                    "title": "Extra Large Capacity",
+                    "description": "Offers a spacious 45.61 m³ internal volume suitable for long or oversized cargo."
+                },
+                {
+                    "title": "Open Top Access",
+                    "description": "Removable top design enables easy vertical loading via crane or hoist."
+                },
+                {
+                    "title": "Built for Harsh Environments",
+                    "description": "Constructed to endure offshore and marine conditions with high structural integrity."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "4–6 weeks",
+            "capacity": "45.61 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "8200 x 2438 x 3010 mm (27' x 8' x 10')",
+                    "internal": "7664 x 2130 x 2794 mm (25' x 7' x 9')",
+                    "shipping": "45.61 m³"
+                },
+                "weights": {
+                    "tare": "5960 Kgs (13140 Lbs)",
+                    "payload": "7000 Kgs (15430 Lbs)",
+                    "gross": "12960 Kgs (28570 Lbs)"
+                },
+                "performance": {
+                    "capacity": "45.61 m³",
+                    "stackability": "Stackable as per offshore DNV standards",
+                    "temperature": "Built for offshore and marine environmental conditions"
+                }
+            },
+            "warranty": "12 months against manufacturing and structural defects"
+        },
+        {
+            "id": 8,
             "img": "4 ft Offshore Tool Basket - 01.png",
-            "link": "/products/5",
+            "link": "/products/8",
             "title": "4 ft Offshore Tool Basket",
             "shortDescription": "Compact offshore cargo basket suitable for small tool transport with certified lifting capacity.",
             "description": "The 4 ft Offshore Tool Basket is built for transporting smaller tools and equipment in offshore environments. Compact yet sturdy, it meets offshore handling requirements and ensures reliable performance in harsh conditions. With certified weight capacity and optimal internal volume, it's a go-to choice for operational flexibility.",
-            "category": "Offshore Basket",
+            "category": "Offshore Cargo Basket",
             "features": [
                 {
                     "title": "External Dimensions",
@@ -273,13 +426,13 @@
             "warranty": "1-year manufacturing warranty"
         },
         {
-            "id": 6,
+            "id": 9,
             "img": "10 ft Offshore Tool Basket - 01.png",
-            "link": "/products/6",
+            "link": "/products/9",
             "title": "10 ft Offshore Tool Basket",
             "shortDescription": "High-capacity offshore basket ideal for transporting long or bulky tools and equipment.",
             "description": "The 10 ft Offshore Tool Basket is engineered for secure offshore transport of elongated or bulk tools. Constructed to DNV standards, it offers optimal space, strength, and weight capacity. Designed for rough offshore environments, it ensures dependable performance during lifting and storage operations.",
-            "category": "Offshore Basket",
+            "category": "Offshore Cargo Basket",
             "features": [
                 {
                     "title": "External Dimensions",
@@ -324,13 +477,16 @@
             "warranty": "1-year manufacturing warranty"
         },
         {
-            "id": 7,
+            "id": 10,
             "img": "15 ft Offshore Tool Basket - 01.png",
-            "link": "/products/7",
+            "link": "/products/10",
             "title": "15 ft Offshore Tool Basket",
             "shortDescription": "Large-capacity offshore basket designed for transporting extended tools and equipment in offshore operations.",
             "description": "The 15 ft Offshore Tool Basket provides ample space and strength for transporting elongated and heavy-duty tools across offshore platforms. Fabricated to DNV standards, it ensures secure handling in rough sea environments while maximizing operational efficiency with increased volume.",
-            "category": "Offshore Basket",
+            "category": [
+                "Offshore Cargo Basket",
+                "Offshore Tool Basket"
+            ],
             "features": [
                 {
                     "title": "External Dimensions",
@@ -375,13 +531,70 @@
             "warranty": "1-year manufacturing warranty"
         },
         {
-            "id": 8,
+            "id": 11,
+            "img": "20 ft Offshore Tool Basket 1.png",
+            "link": "/products/11",
+            "title": "20 ft Offshore Tool Basket",
+            "shortDescription": "Heavy-duty 20 ft offshore cargo basket with 12.9 m³ capacity for secure transport of tools and equipment.",
+            "description": "The 20 ft Offshore Tool Basket is purpose-built for the safe handling and transportation of tools, equipment, and supplies in offshore environments. Designed in accordance with DNV 2.7-1 standards, it offers high durability, optimal space utilization, and easy crane handling. Its open design and robust build make it a go-to solution for offshore logistics.",
+            "category": [
+                "Offshore Cargo Basket",
+                "Offshore Tool Basket"
+            ],
+            "features": [
+                {
+                    "title": "DNV 2.7-1 Certified",
+                    "description": "Complies with offshore container standards for lifting, safety, and structural integrity."
+                },
+                {
+                    "title": "Open Top Design",
+                    "description": "Facilitates quick and easy loading of tools and long equipment from the top."
+                },
+                {
+                    "title": "High Payload Capacity",
+                    "description": "Supports a payload of up to 10,500 Kgs (23,148 Lbs), ensuring flexibility for offshore operations."
+                },
+                {
+                    "title": "Optimized for Offshore Use",
+                    "description": "Engineered to perform under harsh offshore conditions with reinforced structure and corrosion-resistant materials."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2–4 weeks",
+            "capacity": "12.9 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "6058 x 2438 x 1338 mm (20' x 8' x 4.6' ft)",
+                    "internal": "5858 x 2238 x 990 mm (19.2' x 7.3' x 3.2' ft)",
+                    "shipping": "12.9 m³"
+                },
+                "weights": {
+                    "tare": "2550 Kgs (5621 Lbs)",
+                    "payload": "10500 Kgs (23148 Lbs)",
+                    "gross": "13050 Kgs (28770 Lbs)"
+                },
+                "performance": {
+                    "capacity": "12.9 m³",
+                    "stackability": "Stackable for deck and rig storage",
+                    "temperature": "Suitable for offshore marine environments"
+                }
+            },
+            "warranty": "12 months structural warranty under offshore usage conditions"
+        },
+        {
+            "id": 12,
             "img": "23 ft Offshore Tool Rack Basket - 01.png",
-            "link": "/products/8",
+            "link": "/products/12",
             "title": "23 ft Offshore Tool Rack Basket",
             "shortDescription": "High-capacity offshore basket designed for long, oversized tools used in oil & gas operations.",
             "description": "The 23 ft Offshore Tool Rack Basket is a durable offshore handling solution designed to transport long tools and equipment securely across offshore platforms. Built to meet offshore industry safety and performance standards, it provides optimal storage with a 3.46 m³ volume capacity.",
-            "category": "Offshore Basket",
+            "category": [
+                "Offshore Cargo Basket",
+                "Offshore Tool Basket"
+            ],
             "features": [
                 {
                     "title": "External Dimensions",
@@ -426,13 +639,13 @@
             "warranty": "1-year standard warranty"
         },
         {
-            "id": 9,
+            "id": 13,
             "img": "40 ft Offshore Tool Basket - 01.png",
-            "link": "/products/9",
+            "link": "/products/13",
             "title": "40 ft Offshore Tool Basket",
             "shortDescription": "Heavy-duty offshore cargo basket ideal for transporting large and long equipment with high payload capacity.",
             "description": "The 40 ft Offshore Tool Basket is engineered for robust offshore handling and transportation. It is specifically designed to accommodate large tools and equipment while ensuring safety, durability, and efficiency in marine and oilfield environments. This model features a spacious 9.1 m³ volume and high load-bearing strength.",
-            "category": "Offshore Basket",
+            "category": "Offshore Cargo Basket",
             "features": [
                 {
                     "title": "External Dimensions",
@@ -475,6 +688,1026 @@
                 }
             },
             "warranty": "1-year standard warranty"
+        },
+        {
+            "id": 14,
+            "img": "30 ft Offshore Tool Basket.png",
+            "link": "/products/14",
+            "title": "30 ft Offshore Tool Basket",
+            "shortDescription": "Durable 30 ft offshore tool basket with 8 m³ volume, engineered for safe offshore cargo transport.",
+            "description": "The 30 ft Offshore Tool Basket is a robust, long-form cargo basket designed for transporting tools and elongated equipment in offshore environments. Built to meet stringent offshore operational requirements, this unit offers excellent payload capacity, corrosion resistance, and optimal structural integrity for handling heavy-duty equipment.",
+            "category": "Offshore Tool Basket",
+            "features": [
+                {
+                    "title": "Optimized for Long Equipment",
+                    "description": "Ideal for transporting long tools or equipment with safety and ease."
+                },
+                {
+                    "title": "DNV 2.7-1 Compliant",
+                    "description": "Designed in accordance with international offshore handling and lifting standards."
+                },
+                {
+                    "title": "Heavy-Duty Construction",
+                    "description": "Provides a payload capacity of 7550 Kgs (16,644 Lbs), suitable for tough offshore operations."
+                },
+                {
+                    "title": "Anti-Corrosive Finish",
+                    "description": "Coated with marine-grade paint to withstand harsh offshore weather and saltwater."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "3–5 weeks",
+            "capacity": "8 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "9150 x 1200 x 1250 mm (30' x 4' x 4' ft)",
+                    "internal": "8950 x 1000 x 900 mm (29.3' x 3.2' x 3' ft)",
+                    "shipping": "8 m³"
+                },
+                "weights": {
+                    "tare": "2450 Kgs (5401 Lbs)",
+                    "payload": "7550 Kgs (16644 Lbs)",
+                    "gross": "10000 Kgs (22046 Lbs)"
+                },
+                "performance": {
+                    "capacity": "8 m³",
+                    "stackability": "Easily stackable for offshore deck storage",
+                    "temperature": "Built for marine and offshore environmental conditions"
+                }
+            },
+            "warranty": "12-month warranty for offshore operational use"
+        },
+        {
+            "id": 15,
+            "img": "10 ft Offshore Half Height Basket.png",
+            "link": "/products/15",
+            "title": "10 ft Offshore Half Height Basket",
+            "shortDescription": "Compact 10 ft offshore half-height basket with 6.5 m³ volume, ideal for secure transport of low-height cargo.",
+            "description": "The 10 ft Offshore Half Height Basket is engineered for efficient and safe transport of low-profile cargo and equipment in offshore environments. It offers robust structural design, high load-bearing capacity, and optimal volume utilization for compact tools and materials, ensuring reliability under harsh marine conditions.",
+            "category": "Half Height Basket",
+            "features": [
+                {
+                    "title": "Low-Profile Heavy-Duty Design",
+                    "description": "Optimized for transporting equipment requiring lower stacking height."
+                },
+                {
+                    "title": "Certified for Offshore Handling",
+                    "description": "Built to meet offshore safety standards including DNV 2.7-1 compliance."
+                },
+                {
+                    "title": "Impressive Load Capacity",
+                    "description": "Carries up to 8000 Kgs (17,636 Lbs) while maintaining a compact footprint."
+                },
+                {
+                    "title": "Corrosion Resistant Coating",
+                    "description": "Protected with marine-grade coating to endure offshore elements."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2–4 weeks",
+            "capacity": "6.5 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2991 x 2438 x 1295 mm (10' x 8' x 4.2' ft)",
+                    "internal": "2779 x 2226 x 1083 mm (9.1' x 7.3' x 3.5' ft)",
+                    "shipping": "6.5 m³"
+                },
+                "weights": {
+                    "tare": "1550 Kgs (3417 Lbs)",
+                    "payload": "8000 Kgs (17636 Lbs)",
+                    "gross": "9550 Kgs (21054 Lbs)"
+                },
+                "performance": {
+                    "capacity": "6.5 m³",
+                    "stackability": "Yes, designed for offshore stacking efficiency",
+                    "temperature": "Built to withstand offshore weather and saline exposure"
+                }
+            },
+            "warranty": "1-year warranty under normal offshore operating conditions"
+        },
+        {
+            "id": 16,
+            "img": "20 ft Offshore Half Height Basket.png",
+            "link": "/products/16",
+            "title": "20 ft Offshore Half Height Basket",
+            "shortDescription": "Durable 20 ft offshore half-height basket with 14 m³ volume, designed for efficient low-profile cargo transport.",
+            "description": "The 20 ft Offshore Half Height Basket is purpose-built for the offshore industry, offering high durability and safety for transporting heavy and low-profile cargo. With a generous internal volume of 14 m³ and a payload of up to 15,000 Kgs, it is ideal for efficient stacking and optimized logistics in challenging marine environments.",
+            "category": "Half Height Basket",
+            "features": [
+                {
+                    "title": "Robust Structural Design",
+                    "description": "Engineered with marine-grade steel for harsh offshore use."
+                },
+                {
+                    "title": "High Payload Capacity",
+                    "description": "Carries up to 15,000 Kgs (33,069 Lbs) of equipment and materials."
+                },
+                {
+                    "title": "Optimized for Stacking",
+                    "description": "Half-height form factor enables double stacking in limited space."
+                },
+                {
+                    "title": "Certified for Offshore Operations",
+                    "description": "Compliant with DNV 2.7-1 and offshore safety standards."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "3–5 weeks",
+            "capacity": "14 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "6058 x 2438 x 1295 mm (20' x 8' x 4.2' ft)",
+                    "internal": "5846 x 2226 x 1083 mm (19.1' x 7.3' x 3.5' ft)",
+                    "shipping": "14 m³"
+                },
+                "weights": {
+                    "tare": "3000 Kgs (6613 Lbs)",
+                    "payload": "15000 Kgs (33069 Lbs)",
+                    "gross": "18000 Kgs (39683 Lbs)"
+                },
+                "performance": {
+                    "capacity": "14 m³",
+                    "stackability": "Stackable - Designed for vertical storage optimization",
+                    "temperature": "Weather-resistant build for offshore and marine environments"
+                }
+            },
+            "warranty": "1-year standard offshore use warranty"
+        },
+        {
+            "id": 17,
+            "img": "27 ft Offshore Half Height Basket.png",
+            "link": "/products/17",
+            "title": "27 ft Offshore Half Height Basket",
+            "shortDescription": "Spacious and durable 27 ft offshore half-height basket with 19.14 m³ capacity for efficient offshore material handling.",
+            "description": "The 27 ft Offshore Half Height Basket is specifically designed to support offshore logistics and transport heavy or elongated equipment in a secure and stackable format. With a robust construction, significant payload capacity, and optimized storage dimensions, this basket is ideal for the oil and gas industry and offshore containerized transport.",
+            "category": "Half Height Basket",
+            "features": [
+                {
+                    "title": "High Storage Volume",
+                    "description": "Offers a large internal capacity of 19.14 m³ for enhanced transport efficiency."
+                },
+                {
+                    "title": "Rugged Build Quality",
+                    "description": "Constructed with corrosion-resistant steel suitable for offshore and marine use."
+                },
+                {
+                    "title": "Stackable Design",
+                    "description": "Half-height profile allows easy stacking to maximize deck space usage."
+                },
+                {
+                    "title": "Industry Standard Compliant",
+                    "description": "Built to meet offshore standards including DNV 2.7-1 for safety and handling."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "3–6 weeks",
+            "capacity": "19.14 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "8200 x 2438 x 1295 mm (27' x 8' x 4')",
+                    "internal": "7984 x 2222 x 1079 mm (26' x 7.2' x 3.5')",
+                    "shipping": "19.14 m³"
+                },
+                "weights": {
+                    "tare": "3330 Kgs (7340 Lbs)",
+                    "payload": "7000 Kgs (15430 Lbs)",
+                    "gross": "10330 Kgs (22770 Lbs)"
+                },
+                "performance": {
+                    "capacity": "19.14 m³",
+                    "stackability": "Yes – half height enables double stacking on deck",
+                    "temperature": "Designed for marine and harsh environmental conditions"
+                }
+            },
+            "warranty": "1-year offshore use warranty included"
+        },
+        {
+            "id": 18,
+            "img": "6 ft Offshore Lifting Frame.png",
+            "link": "/products/18",
+            "title": "6 ft Offshore Lifting Frame",
+            "shortDescription": "Compact and robust 6 ft offshore lifting frame designed for safe offshore lifting and handling operations.",
+            "description": "The 6 ft Offshore Lifting Frame is engineered to facilitate secure and efficient lifting operations in offshore environments. With high load-bearing capacity and a durable steel structure, it is suitable for a wide range of offshore lifting tasks. The frame is compliant with offshore safety standards and offers optimized space utilization.",
+            "category": "Lifting Frame",
+            "features": [
+                {
+                    "title": "Compact Yet Capable",
+                    "description": "Small footprint with a high payload capacity, ideal for space-constrained offshore platforms."
+                },
+                {
+                    "title": "Durable Build",
+                    "description": "Constructed from high-strength materials suitable for offshore use and rough handling."
+                },
+                {
+                    "title": "Easy Integration",
+                    "description": "Designed to integrate seamlessly with standard offshore lifting systems and equipment."
+                },
+                {
+                    "title": "Compliance Assured",
+                    "description": "Meets safety and handling standards for offshore containerized transport and lifting."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2–4 weeks",
+            "capacity": "4 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "1860 x 1530 x 2100 mm (6' x 5' x 7')",
+                    "internal": "1660 x 1330 x 1814 mm (5.4' x 4.3' x 6')",
+                    "shipping": "4 m³"
+                },
+                "weights": {
+                    "tare": "800 Kgs (1760 Lbs)",
+                    "payload": "6000 Kgs (13225 Lbs)",
+                    "gross": "6800 Kgs (14990 Lbs)"
+                },
+                "performance": {
+                    "capacity": "4 m³",
+                    "stackability": "Not stackable – designed for lifting applications",
+                    "temperature": "Engineered for offshore environmental conditions"
+                }
+            },
+            "warranty": "1-year manufacturing and offshore usage warranty"
+        },
+        {
+            "id": 19,
+            "img": "8 ft Offshore Lifting Frame.png",
+            "link": "/products/19",
+            "title": "8 ft Offshore Lifting Frame",
+            "shortDescription": "Heavy-duty 8 ft offshore lifting frame designed for secure lifting in harsh marine environments.",
+            "description": "The 8 ft Offshore Lifting Frame offers a sturdy and versatile solution for offshore material handling. With robust construction, optimized internal dimensions, and a high load-bearing capacity, this frame is ideal for transporting heavy equipment and goods in offshore oil and gas operations. Engineered to meet offshore lifting standards, it ensures safe handling under extreme conditions.",
+            "category": "Lifting Frame",
+            "features": [
+                {
+                    "title": "Heavy-Duty Construction",
+                    "description": "Engineered with reinforced steel for maximum durability in offshore operations."
+                },
+                {
+                    "title": "Generous Internal Space",
+                    "description": "Optimized internal dimensions for secure storage and handling of large equipment."
+                },
+                {
+                    "title": "Offshore Safety Compliant",
+                    "description": "Meets offshore handling and safety regulations for reliable operations."
+                },
+                {
+                    "title": "High Payload Capacity",
+                    "description": "Supports up to 3000 Kgs (6610 Lbs) payload for flexible application range."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2–4 weeks",
+            "capacity": "7.92 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2438 x 2100 x 2150 mm (8' x 7' x 7')",
+                    "internal": "2238 x 1900 x 1864 mm (7.3' x 6.2' x 6')",
+                    "shipping": "7.92 m³"
+                },
+                "weights": {
+                    "tare": "1100 Kgs (2425 Lbs)",
+                    "payload": "3000 Kgs (6610 Lbs)",
+                    "gross": "4100 Kgs (9040 Lbs)"
+                },
+                "performance": {
+                    "capacity": "7.92 m³",
+                    "stackability": "Non-stackable – lifting optimized",
+                    "temperature": "Built to withstand offshore environmental conditions"
+                }
+            },
+            "warranty": "1-year manufacturing and offshore operation warranty"
+        },
+        {
+            "id": 20,
+            "img": "9 ft Offshore Lifting Frame.png",
+            "link": "/products/20",
+            "title": "9 ft Offshore Lifting Frame",
+            "shortDescription": "Durable 9 ft offshore lifting frame with high payload capacity for demanding offshore applications.",
+            "description": "The 9 ft Offshore Lifting Frame is designed to deliver reliable performance and safe handling in offshore environments. With its compact footprint and spacious internal dimensions, it is well-suited for transporting heavy tools and equipment offshore. Constructed for rugged conditions, this frame meets essential safety and quality standards for offshore lifting operations.",
+            "category": "Lifting Frame",
+            "features": [
+                {
+                    "title": "Robust Steel Construction",
+                    "description": "Ensures structural integrity and long-term performance in harsh offshore conditions."
+                },
+                {
+                    "title": "Compact Yet Spacious",
+                    "description": "Optimized size for easy handling with substantial internal volume for tools and parts."
+                },
+                {
+                    "title": "Certified Offshore Handling",
+                    "description": "Built to meet offshore container standards for safety and handling efficiency."
+                },
+                {
+                    "title": "High Load Capability",
+                    "description": "Handles up to 6000 Kgs (13225 Lbs) payload with ease and safety."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2–4 weeks",
+            "capacity": "6.15 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2750 x 1530 x 2100 mm (9' x 5' x 7')",
+                    "internal": "2550 x 1330 x 1814 mm (8.3' x 4.3' x 6')",
+                    "shipping": "6.15 m³"
+                },
+                "weights": {
+                    "tare": "960 Kgs (2115 Lbs)",
+                    "payload": "6000 Kgs (13225 Lbs)",
+                    "gross": "6960 Kgs (15345 Lbs)"
+                },
+                "performance": {
+                    "capacity": "6.15 m³",
+                    "stackability": "Not stackable – designed for offshore crane operations",
+                    "temperature": "Resistant to offshore temperatures and environmental exposure"
+                }
+            },
+            "warranty": "1-year warranty against manufacturing defects and offshore operational stress"
+        },
+        {
+            "id": 21,
+            "img": "10 ft Offshore Lifting Frame.png",
+            "link": "/products/21",
+            "title": "10 ft Offshore Lifting Frame",
+            "shortDescription": "Rugged and compact 10 ft lifting frame for offshore handling with optimized weight and volume.",
+            "description": "The 10 ft Offshore Lifting Frame is designed to facilitate the safe handling and transportation of heavy offshore equipment. Built to withstand the harsh offshore environment, it offers reliable lifting capacity with an optimized volume of 10.61 m³. Ideal for use in the oil & gas sector, this frame provides both durability and efficiency.",
+            "category": "Lifting Frame",
+            "features": [
+                {
+                    "title": "Durable Construction",
+                    "description": "Built to endure tough offshore conditions with a strong steel frame."
+                },
+                {
+                    "title": "Optimized Internal Volume",
+                    "description": "Internal space designed for efficient storage and handling—10.61 cubic meters."
+                },
+                {
+                    "title": "High Payload Capacity",
+                    "description": "Handles up to 6000 kg of payload, suitable for heavy-duty applications."
+                },
+                {
+                    "title": "Compact Design",
+                    "description": "Space-efficient dimensions ensure compatibility with standard offshore transport."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2-4 weeks",
+            "capacity": "6000 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "2991 x 2100 x 2400 mm (10' x 7' x 8')",
+                    "internal": "2691 x 1900 x 2076 mm (8.8' x 6.2' x 6.8')",
+                    "shipping": "10.61 m³"
+                },
+                "weights": {
+                    "tare": "1590 Kgs (3505 Lbs)",
+                    "payload": "6000 Kgs (13225 Lbs)",
+                    "gross": "7590 Kgs (16730 Lbs)"
+                },
+                "performance": {
+                    "capacity": "6000 Kgs",
+                    "stackability": "Stackable - standard offshore frame",
+                    "temperature": "Standard offshore operational temperature range"
+                }
+            },
+            "warranty": "1 Year Manufacturing Warranty"
+        },
+        {
+            "id": 22,
+            "img": "15 ft Offshore Lifting Frame.png",
+            "link": "/products/22",
+            "title": "15 ft Offshore Lifting Frame",
+            "shortDescription": "Heavy-duty 15 ft offshore lifting frame designed for maximum capacity and efficient offshore transport.",
+            "description": "The 15 ft Offshore Lifting Frame offers superior durability and space for offshore material handling. With a spacious internal volume of 19.87 m³ and a robust payload capacity of 5000 kg, this frame is ideal for demanding offshore operations, ensuring safe lifting, stacking, and transport of heavy cargo.",
+            "category": "Lifting Frame",
+            "features": [
+                {
+                    "title": "Robust Offshore Design",
+                    "description": "Constructed to meet the rigorous requirements of offshore operations with maximum durability."
+                },
+                {
+                    "title": "Spacious Interior",
+                    "description": "Provides 19.87 cubic meters of volume with optimized internal dimensions for equipment storage."
+                },
+                {
+                    "title": "Heavy Load Capability",
+                    "description": "Handles payloads up to 5000 kg (11025 lbs), suited for heavy offshore equipment."
+                },
+                {
+                    "title": "Standard Footprint",
+                    "description": "External dimensions compatible with standard transport systems—15' x 8' x 8'."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "3-5 weeks",
+            "capacity": "5000 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "4500 x 2438 x 2438 mm (15' x 8' x 8')",
+                    "internal": "4200 x 2238 x 2114 mm (13.7' x 7.3' x 7')",
+                    "shipping": "19.87 m³"
+                },
+                "weights": {
+                    "tare": "2120 Kgs (4670 Lbs)",
+                    "payload": "5000 Kgs (11025 Lbs)",
+                    "gross": "7120 Kgs (15695 Lbs)"
+                },
+                "performance": {
+                    "capacity": "5000 Kgs",
+                    "stackability": "Yes - Offshore stackable frame",
+                    "temperature": "Standard offshore operating temperature"
+                }
+            },
+            "warranty": "1 Year Manufacturing Warranty"
+        },
+        {
+            "id": 23,
+            "img": "20 ft Offshore Lifting Frame.png",
+            "link": "/products/23",
+            "title": "20 ft Offshore Lifting Frame",
+            "shortDescription": "High-capacity 20 ft offshore lifting frame engineered for optimal strength and internal volume.",
+            "description": "The 20 ft Offshore Lifting Frame is engineered to handle the heaviest offshore lifting operations with a large internal volume of 26.76 m³. With a payload capacity of 10,000 kg and robust construction, it is an ideal choice for offshore equipment handling, ensuring maximum safety, stackability, and logistics efficiency.",
+            "category": "Lifting Frame",
+            "features": [
+                {
+                    "title": "Large Capacity Frame",
+                    "description": "Accommodates up to 10,000 kg payload while maintaining offshore compliance and structural integrity."
+                },
+                {
+                    "title": "Maximized Internal Volume",
+                    "description": "Offers 26.76 cubic meters of internal space—optimized for large equipment and efficient logistics."
+                },
+                {
+                    "title": "Durable Steel Construction",
+                    "description": "Built to withstand offshore environments and repeated lifting operations."
+                },
+                {
+                    "title": "Standard Offshore Dimensions",
+                    "description": "External size of 20' x 8' x 8.5' ensures compatibility with transport systems."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "4-6 weeks",
+            "capacity": "10000 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "6058 x 2438 x 2591 mm (20' x 8' x 8.5')",
+                    "internal": "5518 x 2198 x 2207 mm (18' x 7' x 7.2')",
+                    "shipping": "26.76 m³"
+                },
+                "weights": {
+                    "tare": "4000 Kgs (8820 Lbs)",
+                    "payload": "10000 Kgs (22045 Lbs)",
+                    "gross": "14000 Kgs (30865 Lbs)"
+                },
+                "performance": {
+                    "capacity": "10000 Kgs",
+                    "stackability": "Stackable - Designed for offshore container stacking",
+                    "temperature": "Standard offshore operating temperature"
+                }
+            },
+            "warranty": "1 Year Manufacturing Warranty"
+        },
+        {
+            "id": 24,
+            "img": "13 ft Offshore Waste Skip 1.png",
+            "link": "/products/24",
+            "title": "13 ft Offshore Waste Skip 1",
+            "shortDescription": "Durable 13 ft offshore waste skip ideal for transporting and disposing of offshore waste materials.",
+            "description": "The 13 ft Offshore Waste Skip is designed for the secure and efficient disposal of waste in offshore environments. With a gross weight of 8000 kg and internal volume of 8.68 m³, it is built to handle heavy loads while ensuring safety, stackability, and compliance with offshore standards.",
+            "category": "13ft Waste Skip",
+            "features": [
+                {
+                    "title": "Optimized for Waste Handling",
+                    "description": "Purpose-built for secure offshore waste storage and transport with reinforced sides."
+                },
+                {
+                    "title": "Compact and Efficient",
+                    "description": "Offers 8.68 m³ capacity in a compact form factor for efficient deck space usage."
+                },
+                {
+                    "title": "Offshore Certified Design",
+                    "description": "Engineered to meet offshore environmental and operational safety requirements."
+                },
+                {
+                    "title": "Strong Load Capacity",
+                    "description": "Handles up to 6500 kg of payload, ideal for bulk or heavy waste materials."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "3-5 weeks",
+            "capacity": "6500 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "3960 x 1860 x 1560 mm (13' x 6' x 5')",
+                    "internal": "3835 x 1724 x 1314 mm (12.5' x 5.6' x 4.3')",
+                    "shipping": "8.68 m³"
+                },
+                "weights": {
+                    "tare": "1500 Kgs (3306 Lbs)",
+                    "payload": "6500 Kgs (14330 Lbs)",
+                    "gross": "8000 Kgs (17636 Lbs)"
+                },
+                "performance": {
+                    "capacity": "6500 Kgs",
+                    "stackability": "Stackable - designed for offshore handling",
+                    "temperature": "Standard offshore operational range"
+                }
+            },
+            "warranty": "1 Year Manufacturing Warranty"
+        },
+        {
+            "id": 25,
+            "img": "Offshore Drill Mud Cutting Skip - 10 T.png",
+            "link": "/products/25",
+            "title": "Offshore Drill Mud Cutting Skip - 10 T",
+            "shortDescription": "Heavy-duty 10T offshore skip designed for secure handling of drill mud cuttings with optimal space utilization.",
+            "description": "The Offshore Drill Mud Cutting Skip - 10T is purpose-built to manage and transport drill cuttings offshore. With a 3 m³ capacity and robust construction, it offers safe and efficient handling under extreme marine conditions. Designed for high payload with compact footprint for deck optimization.",
+            "category": "Drill Mud Cutting Skip",
+            "features": [
+                {
+                    "title": "Compact Yet High-Capacity",
+                    "description": "3 cubic meter capacity in a small footprint for efficient deck space utilization."
+                },
+                {
+                    "title": "Heavy Payload Capability",
+                    "description": "Carries up to 8500 kg of payload, suitable for demanding offshore waste transport."
+                },
+                {
+                    "title": "Built for Harsh Environments",
+                    "description": "Durable offshore-rated frame ensures safe handling of hazardous and heavy drill mud."
+                },
+                {
+                    "title": "Stackable Offshore Design",
+                    "description": "Built with stackability and transport efficiency in mind, meeting offshore specs."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2-4 weeks",
+            "capacity": "8500 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "2300 x 1960 x 1312 mm (7.5' x 6.4' x 4.3')",
+                    "internal": "2100 x 1760 x 880 mm (6.8' x 5.7' x 2.8')",
+                    "shipping": "3 m³"
+                },
+                "weights": {
+                    "tare": "1413 Kgs (3115 Lbs)",
+                    "payload": "8500 Kgs (18739 Lbs)",
+                    "gross": "9913 Kgs (21854 Lbs)"
+                },
+                "performance": {
+                    "capacity": "8500 Kgs",
+                    "stackability": "Yes - Stackable for offshore handling",
+                    "temperature": "Standard offshore operational range"
+                }
+            },
+            "warranty": "1 Year Manufacturing Warranty"
+        },
+        {
+            "id": 26,
+            "img": "Offshore Drill Mud Cutting Skip - 7.5T.png",
+            "link": "/products/26",
+            "title": "Offshore Drill Mud Cutting Skip - 7.5T",
+            "shortDescription": "Durable offshore skip with 3.4 m³ capacity for secure handling of drill mud and cuttings.",
+            "description": "The Offshore Drill Mud Cutting Skip - 7.5T is designed for the safe transport and containment of drill mud and waste in offshore environments. With a 3.4 cubic meter capacity and heavy-duty design, it delivers excellent payload handling with reduced tare weight for optimized efficiency on offshore platforms.",
+            "category": "Drill Mud Cutting Skip",
+            "features": [
+                {
+                    "title": "Optimal Capacity",
+                    "description": "3.4 m³ volume enables efficient handling of waste while maintaining compact dimensions."
+                },
+                {
+                    "title": "Reduced Tare Weight",
+                    "description": "Weighs only 1345 kg (2965 lbs), reducing overall lift requirements and maximizing net payload."
+                },
+                {
+                    "title": "Heavy-Duty Construction",
+                    "description": "Rated for offshore use with 6500 kg payload capacity and reinforced frame."
+                },
+                {
+                    "title": "Precision-Engineered",
+                    "description": "Internal dimensions tailored for easy loading and secure containment of drill cuttings."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2-3 weeks",
+            "capacity": "6500 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "2400 x 1700 x 1482 mm (7.8' x 5.5' x 4.8')",
+                    "internal": "2200 x 1500 x 1100 mm (7.2' x 4.9' x 3.6')",
+                    "shipping": "3.4 m³"
+                },
+                "weights": {
+                    "tare": "1345 Kgs (2965 Lbs)",
+                    "payload": "6500 Kgs (14330 Lbs)",
+                    "gross": "7845 Kgs (17295 Lbs)"
+                },
+                "performance": {
+                    "capacity": "6500 Kgs",
+                    "stackability": "Yes - Stackable design for efficient transport",
+                    "temperature": "Rated for offshore operational conditions"
+                }
+            },
+            "warranty": "1 Year Manufacturing Warranty"
+        },
+        {
+            "id": 27,
+            "img": "12 Capacity Gas Cylinder Rack.png",
+            "link": "/products/27",
+            "title": "12 Capacity Gas Cylinder Rack",
+            "shortDescription": "Robust gas cylinder rack designed to securely hold 12 cylinders in offshore environments.",
+            "description": "The 12 Capacity Gas Cylinder Rack is engineered for safe offshore transport and storage of up to 12 gas cylinders. With a compact footprint and strong lifting design, this rack ensures operational efficiency and meets offshore handling standards.",
+            "category": "Gas Cylinder Rack",
+            "features": [
+                {
+                    "title": "12-Cylinder Capacity",
+                    "description": "Efficiently holds up to 12 gas cylinders in a compact, secure frame."
+                },
+                {
+                    "title": "Compact Design",
+                    "description": "External dimensions of 1390 x 1090 x 1600 mm (4.5' x 3.5' x 5.2') allow ease of storage and handling."
+                },
+                {
+                    "title": "Optimized Load Ratings",
+                    "description": "Payload of 1550 Kgs with a gross weight of 2000 Kgs for offshore operational safety."
+                },
+                {
+                    "title": "Durable and Lightweight",
+                    "description": "Tare weight of just 450 Kgs (990 lbs), ideal for lifting applications on rigs and vessels."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "1-2 weeks",
+            "capacity": "1550 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "1390 x 1090 x 1600 mm (4.5' x 3.5' x 5.2')",
+                    "internal": "1260 x 960 x 1300 mm (4' x 3' x 4.2')",
+                    "shipping": "1.57 m³"
+                },
+                "weights": {
+                    "tare": "450 Kgs (990 Lbs)",
+                    "payload": "1550 Kgs (3415 Lbs)",
+                    "gross": "2000 Kgs (4410 Lbs)"
+                },
+                "performance": {
+                    "capacity": "1550 Kgs",
+                    "stackability": "Yes - Stackable rack configuration",
+                    "temperature": "Built to withstand offshore operational environments"
+                }
+            },
+            "warranty": "1 Year Structural Warranty"
+        },
+        {
+            "id": 28,
+            "img": "16 Capacity Gas Cylinder Rack.png",
+            "link": "/products/28",
+            "title": "16 Capacity Gas Cylinder Rack",
+            "shortDescription": "Heavy-duty offshore cylinder rack with 16-cylinder storage capacity.",
+            "description": "The 16 Capacity Gas Cylinder Rack is designed to meet offshore safety and handling standards. Built to accommodate up to 16 gas cylinders, this unit offers optimized dimensions for stability and stackability while providing efficient handling in rugged conditions.",
+            "category": "Gas Cylinder Rack",
+            "features": [
+                {
+                    "title": "High Capacity Design",
+                    "description": "Engineered to store 16 gas cylinders securely for offshore and industrial environments."
+                },
+                {
+                    "title": "Optimized Footprint",
+                    "description": "Compact 1120 x 1120 x 2050 mm (3.9' x 3.9' x 7') external dimensions to maximize deck space."
+                },
+                {
+                    "title": "Built for Durability",
+                    "description": "Fabricated for long service life under harsh offshore conditions with a gross weight of 2000 Kgs."
+                },
+                {
+                    "title": "Lightweight with High Payload",
+                    "description": "Tare weight of 450 Kgs and payload capacity of 1550 Kgs (3415 Lbs)."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "1-2 weeks",
+            "capacity": "1550 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "1120 x 1120 x 2050 mm (3.9' x 3.9' x 7')",
+                    "internal": "990 x 990 x 1748 mm (3.2' x 3.2' x 5.7')",
+                    "shipping": "1.7 m³"
+                },
+                "weights": {
+                    "tare": "450 Kgs (990 Lbs)",
+                    "payload": "1550 Kgs (3415 Lbs)",
+                    "gross": "2000 Kgs (4410 Lbs)"
+                },
+                "performance": {
+                    "capacity": "1550 Kgs",
+                    "stackability": "Yes - Stackable for transport and storage",
+                    "temperature": "Resistant to offshore environmental conditions"
+                }
+            },
+            "warranty": "1 Year Structural Warranty"
+        },
+        {
+            "id": 29,
+            "img": "64 Capacity Gas Cylinder Quad 1.png",
+            "link": "/products/29",
+            "title": "64 Capacity Gas Cylinder Quad",
+            "shortDescription": "High-capacity offshore gas cylinder quad for safe and efficient transport and storage.",
+            "description": "The 64 Capacity Gas Cylinder Quad is built for high-volume gas cylinder handling in offshore and industrial environments. Designed to maximize capacity and minimize deck footprint, it offers durability, safety, and compliance with offshore lifting standards.",
+            "category": "Gas Cylinder Quad",
+            "features": [
+                {
+                    "title": "High Volume Storage",
+                    "description": "Stores up to 64 gas cylinders, ideal for offshore operations requiring bulk gas supply."
+                },
+                {
+                    "title": "Compact Yet Spacious",
+                    "description": "External dimensions of 2120 x 1950 x 2340 mm (7' x 6.4' x 7.6') to optimize space usage on deck."
+                },
+                {
+                    "title": "Heavy-Duty Payload",
+                    "description": "Capable of carrying a payload of 6290 Kgs (13865 Lbs), making it suitable for demanding loads."
+                },
+                {
+                    "title": "Built to Last",
+                    "description": "Rugged steel construction with a tare weight of 1210 Kgs ensures long-term durability."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2-3 weeks",
+            "capacity": "6290 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "2120 x 1950 x 2340 mm (7' x 6.4' x 7.6')",
+                    "internal": "1904 x 1734 x 1904 mm (6.2' x 5.6' x 6.2')",
+                    "shipping": "6.28 m³"
+                },
+                "weights": {
+                    "tare": "1210 Kgs (2665 Lbs)",
+                    "payload": "6290 Kgs (13865 Lbs)",
+                    "gross": "7500 Kgs (16530 Lbs)"
+                },
+                "performance": {
+                    "capacity": "6290 Kgs",
+                    "stackability": "Yes - Stackable and forklift compatible",
+                    "temperature": "Suitable for harsh offshore environments"
+                }
+            },
+            "warranty": "1 Year Structural Warranty"
+        },
+        {
+            "id": 30,
+            "img": "Offshore Work Basket - 2P 1.png",
+            "link": "/products/30",
+            "title": "Offshore Work Basket - 2P",
+            "shortDescription": "Durable 2-person offshore work basket designed for safe personnel lifting and operations.",
+            "description": "The Offshore Work Basket - 2P is engineered for safely lifting and transporting personnel in offshore and industrial environments. Built to offshore safety standards, it provides secure access for maintenance and inspection tasks at height.",
+            "category": "Personal Work Basket",
+            "features": [
+                {
+                    "title": "2-Person Capacity",
+                    "description": "Designed to safely accommodate two workers for offshore maintenance and inspection work."
+                },
+                {
+                    "title": "Compact and Robust Design",
+                    "description": "External dimensions of 1500 x 1190 x 2440 mm (5' x 3.9' x 8') offer a balance of comfort and mobility."
+                },
+                {
+                    "title": "Certified for Offshore Use",
+                    "description": "Constructed with heavy-duty materials to comply with offshore lifting and safety regulations."
+                },
+                {
+                    "title": "Reliable Payload Handling",
+                    "description": "Supports a payload of 750 Kgs (1653 Lbs) with a gross weight of 1200 Kgs (2645 Lbs)."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "2-3 weeks",
+            "capacity": "750 Kgs Payload",
+            "specifications": {
+                "dimensions": {
+                    "external": "1500 x 1190 x 2440 mm (5' x 3.9' x 8')",
+                    "internal": "1380 x 1070 x 2105 mm (4.5' x 3.3' x 7')",
+                    "shipping": "3 m³"
+                },
+                "weights": {
+                    "tare": "450 Kgs (992 Lbs)",
+                    "payload": "750 Kgs (1653 Lbs)",
+                    "gross": "1200 Kgs (2645 Lbs)"
+                },
+                "performance": {
+                    "capacity": "750 Kgs",
+                    "stackability": "Yes - Stackable and forklift accessible",
+                    "temperature": "Engineered for offshore environments"
+                }
+            },
+            "warranty": "1 Year Structural Warranty"
+        },
+        {
+            "id": 31,
+            "img": "13 ft Offshore Drum Basket 1.png",
+            "link": "/products/31",
+            "title": "13 ft Offshore Drum Basket",
+            "shortDescription": "Robust offshore drum basket designed for safe and efficient handling of drums in offshore environments.",
+            "description": "The 13 ft Offshore Drum Basket offers high durability and optimal capacity for safe offshore operations. Engineered for stability, it ensures secure transportation and storage of drums under harsh offshore conditions. With a spacious interior, excellent payload capacity, and superior construction, this basket is ideal for oil & gas and offshore container applications.",
+            "category": "Drum Basket",
+            "features": [
+                {
+                    "title": "Heavy-Duty Construction",
+                    "description": "Built with robust materials to withstand offshore environments and heavy usage."
+                },
+                {
+                    "title": "Optimized Internal Space",
+                    "description": "Spacious internal dimensions allow efficient drum storage and handling."
+                },
+                {
+                    "title": "High Payload Capacity",
+                    "description": "Supports payloads up to 8950 Kgs (19731 Lbs) ensuring maximum efficiency."
+                },
+                {
+                    "title": "Certified for Offshore Use",
+                    "description": "Complies with offshore container standards ensuring safe and reliable performance."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "6-8 weeks",
+            "capacity": "9.5 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "4200 x 1920 x 1906 mm (13.7' x 7' x 7')",
+                    "internal": "4000 x 1560 x 1515 mm (13' x 4.9' x 4.9')",
+                    "shipping": "Standard Offshore Frame"
+                },
+                "weights": {
+                    "tare": "2550 Kgs (5621 Lbs)",
+                    "payload": "8950 Kgs (19731 Lbs)",
+                    "gross": "11500 Kgs (25353 Lbs)"
+                },
+                "performance": {
+                    "capacity": "9.5 m³",
+                    "stackability": "Stackable up to 3 units",
+                    "temperature": "-20°C to +55°C"
+                }
+            },
+            "warranty": "12 Months Manufacturer Warranty"
+        },
+        {
+            "id": 32,
+            "img": "10 ft Offshore Reefer Container 1.png",
+            "link": "/products/32",
+            "title": "10 ft Offshore Reefer Container",
+            "shortDescription": "Compact offshore reefer container designed for safe temperature-controlled storage in offshore environments.",
+            "description": "The 10 ft Offshore Reefer Container provides reliable and efficient refrigerated storage for offshore applications. With robust construction and optimized internal volume, it ensures safe transportation and storage of temperature-sensitive goods even in extreme offshore conditions. Built to meet offshore regulations, this unit offers excellent durability, safety, and operational flexibility.",
+            "category": "Reefer Container",
+            "features": [
+                {
+                    "title": "Temperature-Controlled Storage",
+                    "description": "Maintains stable temperatures for perishable and sensitive materials in offshore environments."
+                },
+                {
+                    "title": "Compact Design",
+                    "description": "Ideal for limited space offshore platforms while maximizing internal storage volume."
+                },
+                {
+                    "title": "Heavy-Duty Offshore Build",
+                    "description": "Designed to withstand harsh offshore weather, corrosion, and heavy usage."
+                },
+                {
+                    "title": "Certified for Offshore Operations",
+                    "description": "Meets international offshore container standards for safety and compliance."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "6-8 weeks",
+            "capacity": "13.83 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "2991 x 2438 x 2591 mm (10' x 8' x 8.6')",
+                    "internal": "2675 x 2222 x 2327 mm (8.7' x 7.3' x 7.6')",
+                    "shipping": "Standard Offshore Frame"
+                },
+                "weights": {
+                    "tare": "2200 Kgs (4850 Lbs)",
+                    "payload": "8000 Kgs (17636 Lbs)",
+                    "gross": "10200 Kgs (22487 Lbs)"
+                },
+                "performance": {
+                    "capacity": "13.83 m³",
+                    "stackability": "Stackable up to 3 units",
+                    "temperature": "-25°C to +25°C"
+                }
+            },
+            "warranty": "12 Months Manufacturer Warranty"
+        },
+        {
+            "id": 33,
+            "img": "10 ft Offshore Metal Skip 1.png",
+            "link": "/products/33",
+            "title": "10 ft Offshore Metal Skip",
+            "shortDescription": "Compact offshore metal skip for efficient offshore waste handling and material management.",
+            "description": "The 10 ft Offshore Metal Skip is a highly durable and compact solution for waste and material management in offshore environments. Engineered to withstand harsh offshore conditions, this skip offers efficient capacity, superior corrosion resistance, and is fully certified for offshore lifting and transport operations.",
+            "category": "Metal Skip",
+            "features": [
+                {
+                    "title": "Rugged Offshore Construction",
+                    "description": "Built with high-strength steel to endure the toughest offshore environments."
+                },
+                {
+                    "title": "Optimized Compact Design",
+                    "description": "With a capacity of 2.68 m³, it maximizes storage while minimizing space usage on offshore platforms."
+                },
+                {
+                    "title": "Certified Offshore Lifting",
+                    "description": "Complies with offshore handling regulations for safe and reliable operations."
+                },
+                {
+                    "title": "Corrosion Resistant Coating",
+                    "description": "Special marine-grade coating ensures longevity even in corrosive offshore atmospheres."
+                }
+            ],
+            "industries": [
+                "Offshore Containers",
+                "Oil & Gas Offshore"
+            ],
+            "leadTime": "4-6 weeks",
+            "capacity": "2.68 m³",
+            "specifications": {
+                "dimensions": {
+                    "external": "3000 x 1560 x 960 mm (10' x 5' x 3')",
+                    "internal": "2840 x 1400 x 675 mm (9.3' x 4.5' x 2')",
+                    "shipping": "Standard Offshore Frame"
+                },
+                "weights": {
+                    "tare": "700 Kgs (1543 Lbs)",
+                    "payload": "3000 Kgs (6613 Lbs)",
+                    "gross": "3700 Kgs (8157 Lbs)"
+                },
+                "performance": {
+                    "capacity": "2.68 m³",
+                    "stackability": "Stackable up to 3 units",
+                    "temperature": "-20°C to +55°C"
+                }
+            },
+            "warranty": "12 Months Manufacturer Warranty"
         }
     ]
 }

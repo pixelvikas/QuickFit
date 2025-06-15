@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import logo from "../assets/quickfitlogo.png";
+import logo from "../assets/quickfitlogo.svg";
 
 import { FaXTwitter } from "react-icons/fa6";
 

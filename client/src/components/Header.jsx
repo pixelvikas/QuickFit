@@ -7,7 +7,7 @@ import {
   RiLeafLine,
   RiShieldUserLine,
 } from "react-icons/ri";
-import QuickFitLogo from "../assets/quickfitlogo.png";
+import QuickFitLogo from "../assets/quickfitlogo.svg";
 import {
   RiPlanetLine,
   RiMenuLine,
