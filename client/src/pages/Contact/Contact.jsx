@@ -1,4 +1,6 @@
 import React from "react";
+import { CiLinkedin } from "react-icons/ci";
+
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import contactbg from "../../assets/contactbg.png";
 
@@ -40,18 +42,15 @@ const Contact = () => {
 
               <div className="contact-box">
                 <h5>Email Address</h5>
-                <p>info@example.com</p>
-                <p>contact@example.com</p>
+                <p>info@quickfitengg.com</p>
+                <p>sales@quickfitengg.com</p>
               </div>
 
               <div className="contact-box">
                 <h5>Follow Us</h5>
                 <div className="social-icons">
                   <a href="#" aria-label="Instagram">
-                    <FaInstagram />
-                  </a>
-                  <a href="#" aria-label="Facebook">
-                    <FaFacebook />
+                    <CiLinkedin />
                   </a>
                 </div>
               </div>

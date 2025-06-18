@@ -440,7 +440,6 @@ html {
   }
   */
 }
-
 .footer {
   background-color: #00254a;
   color: white;
@@ -476,7 +475,6 @@ html {
 
 .footer-since span {
   color: #f15a24;
-  font-weight: bold;
 }
 
 .footer-description {
@@ -509,11 +507,29 @@ html {
   color: #c0c0c0;
 }
 
+.footer-link {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 .footer-socials {
   display: flex;
   gap: 15px;
   font-size: 18px;
   color: white;
+}
+
+.footer-socials a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #f15a24;
 }
 
 /* Right Column */
@@ -540,12 +556,16 @@ html {
 
 .footer-links li {
   margin-bottom: 6px;
-  cursor: pointer;
 }
 
 .footer-links li a {
   color: #c0c0c0;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
   text-decoration: underline;
+  color: white;
 }
 
 .certifications-section {

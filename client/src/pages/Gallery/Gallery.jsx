@@ -666,7 +666,7 @@ const Gallery = () => {
 
       <header className="gallery-header">
         <div className="header-content">
-          <h1>Container Production Gallery</h1>
+          <h1>Gallery</h1>
           <p className="subtitle">
             Explore our manufacturing process, quality standards, and finished
             products
@@ -944,7 +944,7 @@ const Gallery = () => {
         .gallery-header h1 {
           font-size: 2.75rem;
           font-weight: 800;
-          color: var(--primary-dark);
+          color: #212529;
           margin-bottom: 0.75rem;
           letter-spacing: -0.5px;
         }

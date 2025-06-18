@@ -168,7 +168,7 @@ const Header = () => {
                         className="dropdown__link"
                         onClick={closeAllMenus}
                       >
-                        Oil &amp; Gas Offshore
+                        Oil & Gas Offshore
                       </Link>
                     </li>
                     <li>
@@ -177,7 +177,7 @@ const Header = () => {
                         className="dropdown__link"
                         onClick={closeAllMenus}
                       >
-                        Shipping Containers
+                        Offshore Containers
                       </Link>
                     </li>
                     <li>
@@ -186,7 +186,7 @@ const Header = () => {
                         className="dropdown__link"
                         onClick={closeAllMenus}
                       >
-                        Renewable Energy
+                        Offshore Wind Energy
                       </Link>
                     </li>
                     <li>
@@ -195,7 +195,7 @@ const Header = () => {
                         className="dropdown__link"
                         onClick={closeAllMenus}
                       >
-                        Naval &amp; Defense Sectors
+                        Military & Defense Industries
                       </Link>
                     </li>
                   </ul>

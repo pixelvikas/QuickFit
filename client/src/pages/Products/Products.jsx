@@ -213,19 +213,22 @@ const Products = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <FiMail className="contact-icon" />
-                <span>sales@offshorecontainers.com</span>
+                <span>info@quickfitengg.com</span>
               </div>
               <div className="contact-item">
                 <FiPhone className="contact-icon" />
-                <span>+1 (800) 123-4567</span>
+                <span>+022-4751-0385</span>
               </div>
               <div className="contact-item">
                 <FaWhatsapp className="contact-icon" />
-                <span>+1 (800) 123-4567</span>
+                <span>+91 986990842</span>
               </div>
               <div className="contact-item">
                 <FiMapPin className="contact-icon" />
-                <span>123 Marine Way, Houston, TX</span>
+                <span>
+                  B 400, Oberoi Garden Business Prewmises, Chandivali Farm Road
+                  Andheri East, Mumbai - 400072. Maharashtra. INDIA
+                </span>
               </div>
             </div>
             <button
