@@ -226,7 +226,7 @@ const Products = () => {
               <div className="contact-item">
                 <FiMapPin className="contact-icon" />
                 <span>
-                  B 400, Oberoi Garden Business Prewmises, Chandivali Farm Road
+                  B 400, Oberoi Garden Business Premises, Chandivali Farm Road
                   Andheri East, Mumbai - 400072. Maharashtra. INDIA
                 </span>
               </div>
