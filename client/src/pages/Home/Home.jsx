@@ -4,8 +4,11 @@ import { MdArrowOutward } from "react-icons/md";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { Link, useNavigate } from "react-router-dom";
-
-import herobg from "../../assets/homehero.png";
+import herobg1 from "../../assets/herobg1.jpeg";
+import herobg2 from "../../assets/herobg2.png";
+import herobg3 from "../../assets/herobg3.png";
+import herobg4 from "../../assets/herobg4.png";
+import herobg5 from "../../assets/herobg5.png";
 
 import i1 from "../../assets/oil&gas.png";
 import i2 from "../../assets/shipping.png";
@@ -13,9 +16,6 @@ import i3 from "../../assets/renewable.png";
 import i4 from "../../assets/naval.png";
 
 import c1 from "../../assets/cert1.png";
-import c2 from "../../assets/cert2.png";
-import c3 from "../../assets/cert3.png";
-import c4 from "../../assets/cert4.png";
 
 import client1 from "../../assets/client1.png";
 import client2 from "../../assets/client2.png";
@@ -40,7 +40,12 @@ import client19 from "../../assets/client19.png";
 import productsData from "../../productsData.json";
 import blogsData from "../../blogData.json";
 
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import earth from "../../assets/earthbg.png";
+
 const Home = () => {
   const navigate = useNavigate();
   const { products } = productsData;
@@ -115,30 +120,43 @@ const Home = () => {
       .replace(/\s+/g, "-");
     navigate(`/blogs/${slug}`);
   };
+
+  const images = [herobg1, herobg2, herobg3, herobg4, herobg5];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 3000); // change image every 3 seconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
   return (
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-bg-wrapper">
           <div className="hero-overlay"></div>
-          <img
-            src={herobg}
-            alt="Container Yard Background"
-            className="hero-bg"
-            loading="lazy"
-          />
+          <div className="hero-slider">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Slide ${index}`}
+                className={`hero-bg ${index === currentIndex ? "active" : ""}`}
+                loading="lazy"
+              />
+            ))}
+          </div>
           <div className="hero-content">
             <h4>
               <span className="orange">#</span>WELCOME TO QUICKFIT
             </h4>
-            <h1>
-              Built to Withstand.
-              <br />
-              Engineered to Deliver.
-            </h1>
+            <h1>Quick Fit – Globally Certified – Offshore Ready.</h1>
             <p>
-              Premium Offshore Containers & Equipment Trusted by Global
-              Industries
+              Setting the benchmark in offshore containers, fully certified to
+              DNV 2.7-1 and ISO 10855 standards{" "}
             </p>
             <button className="hero-button" onClick={handleExploreClick}>
               Explore Products
@@ -148,19 +166,24 @@ const Home = () => {
 
         <div className="hero-card-section">
           <div className="hero-card">
-            <FaUserTie className="hero-icon" aria-hidden="true" />
-            <h2>50+ Years</h2>
-            <p>of Manufacturing Expertise</p>
-          </div>
-          <div className="hero-card">
             <FaCertificate className="hero-icon" aria-hidden="true" />
-            <h2>DNV 2.7-1 / EN 12079</h2>
+            <h2>DNV 2.7-1 / ISO 10855</h2>
             <p>Certified Containers</p>
           </div>
           <div className="hero-card">
+            <FaUserTie className="hero-icon" aria-hidden="true" />
+            <h2>70+ Approved</h2>
+            <p>Offshore CCU Designs</p>
+          </div>
+          <div className="hero-card">
             <FaGlobeAmericas className="hero-icon" aria-hidden="true" />
-            <h2>70+ Countries</h2>
-            <p>we have delivered in</p>
+            <h2>Worldwide</h2>
+            <p>Supply Coverage</p>
+          </div>
+          <div className="hero-card">
+            <FaUserTie className="hero-icon" aria-hidden="true" />
+            <h2>25+ Years</h2>
+            <p>of Manufacturing Expertise</p>
           </div>
         </div>
       </section>
@@ -171,16 +194,16 @@ const Home = () => {
             <span className="orange">#</span>WHY CHOOSE QUICKFIT
           </span>
           <h2 className="why-title">
-            Custom Solutions for <br />
-            Demanding Environments
+            Complete Global
+            <br /> Supply Coverage for Your <br /> Offshore Needs
           </h2>
         </div>
         <div className="why-right">
           <p className="why-description">
-            At Quickfit, we go beyond manufacturing – we engineer solutions. Our
-            expert services are designed to deliver uncompromising safety,
-            efficiency, and innovation in offshore container and machinery
-            applications. From design to delivery, we've got you covered.
+            Quickfit is more than a manufacturer — we're your offshore solutions
+            partner. We deliver end-to-end offshore cargo carrying units, fully
+            certified to DNV ST-E271 (DNV 2.7-1), ISO 10855 (EN 12079), CSC,
+            IMDG, and IMO standards.
           </p>
         </div>
       </section>
@@ -192,23 +215,27 @@ const Home = () => {
         </div>
 
         <div className="product-cards">
-          {products.slice(0, 3).map((product, index) => (
-            <Link to={product.link}>
-              <div className="product-card" key={product.id}>
-                <div className="card-image-wrapper">
-                  <h1 className="card-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </h1>
-                  <img
-                    src={getImageUrl(product.img)}
-                    alt={product.title}
-                    className="product-image"
-                  />
-                  <div className="card-caption">{product.title}</div>
+          {products
+            .filter((product) =>
+              [1, 16, 3, 23, 28, 29, 30, 13].includes(product.id)
+            )
+            .map((product, index) => (
+              <Link to={product.link} key={product.id}>
+                <div className="product-card">
+                  <div className="card-image-wrapper">
+                    <h1 className="card-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </h1>
+                    <img
+                      src={getImageUrl(product.img)}
+                      alt={product.title}
+                      className="product-image"
+                    />
+                    <div className="card-caption">{product.title}</div>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
         </div>
 
         <button className="hero-button" onClick={handleExploreClick}>
@@ -226,13 +253,20 @@ const Home = () => {
             <h5 className="tag">
               <span className="orange">#</span>ABOUT QUICKFIT
             </h5>
-            <h2 className="headline">We work for you since 1962</h2>
+            <h2 className="headline">
+              Engineering Confidence for Offshore Operations
+            </h2>
             <p className="description">
-              Quickfit is a global manufacturer specializing in offshore
-              containers, skid-mounted modules, and engineered equipment
-              designed for the world’s toughest environments. Since 1962, we’ve
-              delivered high-performance solutions for energy, marine, and
-              industrial sectors.
+              At Quickfit, we specialize in the design and manufacturing of
+              certified offshore equipment built to perform in the world’s most
+              demanding environments. With a legacy dating back to 1998, we have
+              established ourselves as a trusted partner in the energy, marine,
+              and industrial sectors. <br />
+              As a principal designer and DNV-certified manufacturer, we combine
+              deep technical knowledge with advanced fabrication capabilities
+              and trusted vendor supply network to ensure every product meets
+              the highest international standards, including DNV 2.7-1, ISO
+              10855, EN 12079, CSC, IMDG, and IMO.
             </p>
             <button className="hero-button" onClick={handleExploreAbout}>
               More About Quickfit
@@ -249,15 +283,15 @@ const Home = () => {
 
           <div className="stats">
             <div className="stat-box">
-              <h3 className="stat-number">10K+</h3>
-              <p className="stat-label">Units</p>
+              <h3 className="stat-number">1000+</h3>
+              <p className="stat-label">Units Delivered</p>
             </div>
             <div className="stat-box">
               <h3 className="stat-number">70+</h3>
               <p className="stat-label">Countries</p>
             </div>
             <div className="stat-box">
-              <h3 className="stat-number">300+</h3>
+              <h3 className="stat-number">50+</h3>
               <p className="stat-label">Clients</p>
             </div>
           </div>
@@ -275,8 +309,8 @@ const Home = () => {
 
         <div className="industry-grid">
           {industries.map((industry, index) => (
-            <Link to={industry.link}>
-              <div className="industry-card" key={index}>
+            <Link to={industry.link} key={index}>
+              <div className="industry-card">
                 <div className="image-container">
                   <img src={industry.image} alt={industry.label} />
                   <div className="icon-overlay">
@@ -295,9 +329,6 @@ const Home = () => {
         <div className="certifications-container">
           <div className="cert-logos">
             <img src={c1} alt="Certification 1" />
-            <img src={c2} alt="Certification 2" />
-            <img src={c3} alt="Certification 3" />
-            <img src={c4} alt="Certification 4" />
           </div>
 
           <div className="cert-content">
@@ -383,8 +414,17 @@ const Home = () => {
   position: relative;
   width: 100%;
   height: 80vh;
-  max-height: 1400px; /* Increased maximum height */
+  max-height: 1400px;
   overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Send behind overlay and content */
 }
 
 .hero-bg {
@@ -395,7 +435,13 @@ const Home = () => {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   z-index: 1;
+}
+
+.hero-bg.active {
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -409,12 +455,12 @@ const Home = () => {
     rgba(0, 0, 0, 0.7) 40%,
     rgba(0, 0, 0, 0.1)
   );
-  z-index: 2;
+  z-index: 2; /* Above images, below content */
 }
 
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 3; /* Top layer */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -423,6 +469,7 @@ const Home = () => {
   max-width: 600px;
   color: white;
 }
+
 
 .hero-content h4 {
   font-size: clamp(16px, 2vw, 18px);
@@ -502,7 +549,6 @@ const Home = () => {
   margin: -70px auto 0;
   padding: 20px;
   z-index: 3;
-  max-width: 1200px;
 }
 
 .hero-card {
@@ -1075,17 +1121,17 @@ const Home = () => {
   gap: 30px;
   align-content: center;
 }
-.cert-logos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(2, auto); /* 2 rows */
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
+.cert-logos {    display: grid
+;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
 }
 
 .cert-logos img {
-  height: 100px;
+  height: 200px;
   object-fit: contain;
 }
 

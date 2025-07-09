@@ -6,9 +6,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { FiStar, FiX, FiCheckCircle } from "react-icons/fi";
 
 import c1 from "../../assets/cert1.png";
-import c2 from "../../assets/cert2.png";
-import c3 from "../../assets/cert3.png";
-import c4 from "../../assets/cert4.png";
 
 import i1 from "../../assets/oil&gas.png";
 import i2 from "../../assets/shipping.png";
@@ -320,9 +317,6 @@ const SingleIndustry = () => {
 
       <div className="certification-container">
         <img src={c1} alt="DNV ISO 9001 Certification" />
-        <img src={c2} alt="ABS Certification" />
-        <img src={c3} alt="Bureau Veritas Certification" />
-        <img src={c4} alt="Lloyd's Register Certification" />
       </div>
 
       <div className="product-box">

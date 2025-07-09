@@ -9,9 +9,6 @@ import i3 from "../../assets/renewable.png";
 import i4 from "../../assets/naval.png";
 
 import c1 from "../../assets/cert1.png";
-import c2 from "../../assets/cert2.png";
-import c3 from "../../assets/cert3.png";
-import c4 from "../../assets/cert4.png";
 
 import client1 from "../../assets/client1.png";
 import client2 from "../../assets/client2.png";
@@ -201,9 +198,6 @@ const About = () => {
         <div className="certifications-container">
           <div className="cert-logos">
             <img src={c1} alt="Certification 1" />
-            <img src={c2} alt="Certification 2" />
-            <img src={c3} alt="Certification 3" />
-            <img src={c4} alt="Certification 4" />
           </div>
 
           <div className="cert-content">

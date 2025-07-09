@@ -343,29 +343,12 @@ const Products = () => {
                       : currentProduct.category}
                   </p>
 
-                  <div className="modal-specs">
-                    <div className="spec-item">
-                      <strong>Capacity:</strong> {currentProduct.capacity}
-                    </div>
-                    <div className="spec-item">
-                      <strong>Lead Time:</strong> {currentProduct.leadTime}
-                    </div>
-                    <div className="spec-item">
-                      <strong>Warranty:</strong> {currentProduct.warranty}
-                    </div>
-                    <div className="spec-item">
-                      <strong>Dimensions:</strong>{" "}
-                      {currentProduct.specifications.dimensions.external}
-                    </div>
-                  </div>
-
                   <div className="modal-features">
                     {currentProduct.features.map((feature, index) => (
                       <div key={index} className="modal-feature-item">
                         <FiCheckCircle className="modal-feature-icon" />
                         <div>
                           <strong>{feature.title}</strong>
-                          <p>{feature.description}</p>
                         </div>
                       </div>
                     ))}
